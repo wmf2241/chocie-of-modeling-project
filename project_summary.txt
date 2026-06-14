@@ -1,0 +1,250 @@
+============================================================
+PROJECT SUMMARY
+Discrete Choice Experiment: Organic & Certified Tomato Valuation
+China vs. Japan Consumer Study
+Generated: 2026-06-09
+============================================================
+
+────────────────────────────────────────────────────────────
+RESEARCH QUESTION
+────────────────────────────────────────────────────────────
+Do Chinese and Japanese consumers value organic and specially
+certified tomatoes differently, and does external information
+affect their preferences?
+
+────────────────────────────────────────────────────────────
+DATASET OVERVIEW
+────────────────────────────────────────────────────────────
+Source files:
+  - China data  : C_TOMATO.txt
+  - Japan data  : group Total.Tomato.txt
+
+Sample sizes:
+  - China : 422 respondents × 8 tasks × 3 alternatives = 10,128 rows
+  - Japan : 412 respondents × 8 tasks × 3 alternatives =  9,888 rows
+  - After validity filtering: 834 respondents, 6,672 choice tasks
+
+Choice task structure:
+  - Alt 1 = Product A
+  - Alt 2 = Product B
+  - Alt 3 = No-buy (opt-out)
+
+Attributes:
+  - Price   : China (RMB/500g, range ~3–19), Japan (JPY/500g, range ~170–330)
+  - Labels  : Ordinary (baseline), Organic, Special certification
+  - Info treatments (mutually exclusive):
+      EIO  = organic information only
+      EIS  = special certification information only
+      EIOS = both organic + special information
+      EIC  = control (no information)
+
+Consumer segments (pre-coded, SEG5 = reference):
+  China: SEG1=24, SEG2=96, SEG3=41, SEG4=63, SEG5=198
+  Japan: SEG1=98, SEG2=116, SEG3=118, SEG4=64, SEG5=16
+
+────────────────────────────────────────────────────────────
+DESCRIPTIVE STATISTICS: CHOICE SHARES
+────────────────────────────────────────────────────────────
+China:
+  Special certification : 41.7%
+  Organic               : 31.3%
+  Ordinary              : 16.4%
+  No-buy                : 10.5%
+
+Japan:
+  Special certification : 42.1%
+  Organic               : 26.5%
+  Ordinary              : 21.7%
+  No-buy                :  9.7%
+
+Key observation: Both countries strongly prefer specially certified
+tomatoes, followed by organic. Japanese consumers chose more ordinary
+tomatoes than Chinese. No-buy rates are similar (~10%).
+
+────────────────────────────────────────────────────────────
+SOFTWARE & FRAMEWORK
+────────────────────────────────────────────────────────────
+  Language : R 4.5.0 (Windows)
+  Packages : tidyverse, janitor, apollo (v0.3.7)
+  Estimation method: BGW (Broyden-Gold-Wang)
+
+Two R scripts were developed:
+  1. project of choice of model.R  — initial/exploratory version
+  2. claude_choice of model in R.R — final refined version with
+     full descriptives, segment analysis, WTP tables, model comparison,
+     and posterior class probability extraction
+
+All model outputs saved to: ./output/
+
+────────────────────────────────────────────────────────────
+MODELS ESTIMATED (M1–M5)
+────────────────────────────────────────────────────────────
+
+M1: Baseline Pooled MNL
+  - Single price coefficient (pooled across countries)
+  - Ordinary tomato = reference label
+  - Parameters: b_price, b_organic, b_spec, asc_nobuy
+  - Results:
+      b_price   = -0.00573  (t = -18.1, highly significant)
+      b_organic =  0.231    (t =   5.95, significant)
+      b_spec    =  0.943    (t =  19.15, highly significant)
+      asc_nobuy = -2.005    (t = -25.76, strong aversion to no-buy)
+  - Fit: LL = -5833.83, AIC = 11675.65, BIC = 11702.88, ρ² = 0.204
+  - N = 834 individuals, 6,672 observations
+
+M2: Country-Specific MNL (+ SEG effects on no-buy)
+  - Separate price and label coefficients for China and Japan
+  - Country-specific no-buy ASC
+  - Consumer segment dummies (SEG1–SEG4) enter no-buy utility
+  - Results (selected):
+      b_price_cn   = -0.154  (t = -23.6)
+      b_price_jp   = -0.022  (t = -29.0)
+      b_organic_cn =  1.281  (t =  15.3)
+      b_organic_jp =  0.880  (t =  10.9)
+      b_spec_cn    =  0.999  (t =  14.0)
+      b_spec_jp    =  0.824  (t =   9.3)
+      asc_nobuy_cn = -2.376  (t = -22.2)
+      asc_nobuy_jp = -6.691  (t = -29.6)  [Japan strongly avoids no-buy]
+      gamma_seg4   = -0.471  (significant; SEG4 less likely to opt out)
+  - WTP estimates (relative to ordinary, in local currency per 500g):
+      China — Organic: +8.34 RMB,   Special: +6.51 RMB
+      Japan — Organic: +40.19 JPY,  Special: +37.64 JPY
+  - Fit: LL = -5023.04, AIC = 10070.08, BIC = 10151.74, ρ² = 0.315
+  - Substantial improvement over M1
+
+M3: Information-Treatment Interaction MNL
+  - Tests whether information treatments amplify organic/special label valuation
+  - Interaction terms: b_org_eio, b_org_eios, b_spec_eis, b_spec_eios
+  - Retains country-specific prices and ASC from M2
+  - WTP computed for control group and each info treatment scenario
+  - Fit: LL = -5010.41, AIC = 10048.81, BIC = 10144.09, ρ² = ~0.317
+  - Marginal improvement over M2 (small LL gain for 2 extra parameters)
+
+M4: Two-Class Latent Class Model (LCM)
+  - Captures unobserved preference heterogeneity
+  - Class 1 (~74.8% of respondents): high label sensitivity
+  - Class 2 (~25.2% of respondents): low/reversed label sensitivity
+  - Class membership predicted by country (china) and consumer segments
+  - Key results:
+      Class 1 — b_organic_1 = 1.391 (t=19.3), b_spec_1 = 1.219 (t=18.3)
+      Class 2 — b_organic_2 = -0.235 (n.s.),  b_spec_2 =  0.120 (n.s.)
+      Chinese consumers more likely to be in Class 2 (gamma_china_class2 = 0.676, t=3.3)
+  - Class-specific WTP:
+      Class 1 — China: Organic +11.46 RMB, Special +10.05 RMB
+                Japan: Organic +53.83 JPY, Special +47.21 JPY
+      Class 2 — China: Organic  −0.88 RMB (not significant), Special  +0.45 RMB
+                Japan: Organic −16.26 JPY (not significant), Special  +8.29 JPY
+  - Fit: LL = -4370.19, AIC = 8772.38, BIC = 8881.27, ρ² = 0.404
+  - Best-fitting model by AIC/BIC — substantial improvement over MNL models
+
+M5: Attribute Non-Attendance (ANA) Extension
+  - Two classes: label-attending (Class 1) vs price-only (Class 2)
+  - Class membership probability depends on information treatments
+  - Status: CONVERGENCE FAILURE (singular convergence)
+      Several parameters diverged to extreme values (e.g., asc_nobuy_no ≈ -249,
+      delta_att ≈ 626, b_price_cn_no = +1.76 with wrong sign)
+      Standard errors unavailable (BHHH approximation only)
+  - Fit: LL = -5342.85 (worse than M4 and M3)
+  - Conclusion: M5 is not identified in its current specification.
+    The label-non-attending class collapses, likely because the no-buy
+    alternative dominates for that class. Model needs re-specification
+    (e.g., fix b_price_no to a reasonable value, or constrain asc_nobuy_no).
+
+────────────────────────────────────────────────────────────
+MODEL COMPARISON SUMMARY
+────────────────────────────────────────────────────────────
+Model                   LL          k     AIC        BIC
+M1: Pooled MNL        -5833.83      4   11675.65   11702.88
+M2: Country MNL+SEG   -5023.04     12   10070.08   10151.74
+M3: Info Interactions -5010.41     14   10048.81   10144.09
+M4: 2-class LCM       -4370.19     16    8772.38    8881.27  ← BEST
+M5: ANA 2-class       -5342.85     13   10711.69   10800.17  (did not converge)
+
+Best model: M4 (Two-class LCM) by both AIC and BIC.
+Country split in M2 provides large gain over pooled M1.
+Information interactions in M3 add only marginal improvement.
+Latent class heterogeneity in M4 dominates all other models.
+
+────────────────────────────────────────────────────────────
+KEY FINDINGS
+────────────────────────────────────────────────────────────
+1. Both countries strongly prefer certified tomatoes over ordinary,
+   with special certification preferred most (highest choice share).
+
+2. Chinese consumers have higher WTP for organic labels in RMB terms
+   (8.34 RMB) and special certification (6.51 RMB) relative to ordinary.
+   Japanese consumers show WTP of 40.19 JPY (organic) and 37.64 JPY (special).
+
+3. Japan has a much stronger baseline aversion to the no-buy option
+   (asc_nobuy_jp = -6.69 vs. -2.38 for China), suggesting Japanese
+   respondents almost always choose a product.
+
+4. Consumer segment SEG4 shows significantly lower no-buy tendency
+   in China. Segment effects are modest overall.
+
+5. The LCM reveals two distinct consumer types:
+   - ~75% are "label-sensitive" consumers who strongly value certifications.
+   - ~25% are "label-indifferent" consumers for whom labels have little effect.
+   Chinese respondents are significantly more likely to be in the
+   label-indifferent class (Class 2).
+
+6. Information treatments (M3) show some impact on label valuation but
+   the effects are modest compared to unobserved heterogeneity (M4).
+
+7. The ANA model (M5) failed to converge — the label-non-attending class
+   became degenerate. This requires re-specification before use.
+
+────────────────────────────────────────────────────────────
+OUTPUT FILES GENERATED (./output/)
+────────────────────────────────────────────────────────────
+Data files:
+  tomato_apollo_wide.csv            — wide-format estimation database
+  tomato_choice_shares.csv          — choice shares by country & product type
+  tomato_segment_distribution.csv   — consumer segment sizes by country
+
+WTP tables:
+  tomato_wtp_M2.csv                 — country-specific WTP (M2)
+  tomato_wtp_M3.csv                 — information-adjusted WTP (M3)
+  tomato_wtp_M4.csv                 — class-specific WTP (M4)
+
+Model comparison:
+  tomato_model_comparison.csv       — LL, k, AIC, BIC for all models
+
+Apollo model outputs (per model: _output.txt, _estimates.csv, _model.rds):
+  M1_baseline_MNL_*
+  M2_country_MNL_*
+  M3_info_interactions_MNL_*
+  M4_2class_LCM_*
+  M5_ANA_2class_*
+
+────────────────────────────────────────────────────────────
+NEXT STEPS / OPEN ISSUES
+────────────────────────────────────────────────────────────
+1. Fix M5 ANA model convergence:
+   - Consider fixing b_price_cn_no and b_price_jp_no to reasonable
+     negative values, or constrain asc_nobuy_no.
+   - Alternatively, simplify class membership to exclude info treatments
+     and identify the source of degeneracy first.
+
+2. Posterior class analysis for M4:
+   - Extract and analyse individual posterior class probabilities
+     (apollo_classProbs) to characterise who belongs to each class.
+
+3. WTP confidence intervals:
+   - Use delta method or bootstrap to compute standard errors for WTP.
+
+4. LR tests:
+   - Conduct formal likelihood-ratio tests: M2 vs M1, M3 vs M2, M4 vs M2.
+
+5. Reporting:
+   - Section 1: Descriptives (choice shares, info groups, price ranges)
+   - Section 2: M1 baseline
+   - Section 3: M2 country MNL + WTP comparison
+   - Section 4: M3 information treatment effects
+   - Section 5: M4 LCM heterogeneity findings
+   - Section 6: M5 ANA (note convergence issue, discuss implications)
+   - Section 7: Overall model comparison table
+
+============================================================
+End of Summary
+============================================================

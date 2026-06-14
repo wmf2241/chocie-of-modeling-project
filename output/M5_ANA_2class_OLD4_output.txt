@@ -1,0 +1,304 @@
+Model run by admin using Apollo 0.3.7 on R 4.5.0 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : M5_ANA_2class
+Model description                           : ANA: label-attending vs label-non-attending; shared price; info treatment in class membership
+Model run at                                : 2026-06-12 14:39:43.553782
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Unknown (no Hessian calculated)
+Number of individuals                       : 834
+Number of rows in database                  : 6672
+Number of modelled outcomes                 : 20016
+                      mnl_attend : 6672
+                   mnl_no_attend : 6672
+                          lc_ana : 6672
+
+Number of cores used                        :  1 
+Model without mixing
+
+LL(start)                                   : -9243.37
+LL (whole model) at equal shares, LL(0)     : -7329.94
+LL (whole model) at observed shares, LL(C)  : -6342.53
+LL(final, whole model)                      : -4763.36
+Rho-squared vs equal shares                  :  0.3502 
+Adj.Rho-squared vs equal shares              :  0.3487 
+Rho-squared vs observed shares               :  0.249 
+Adj.Rho-squared vs observed shares           :  0.2479 
+AIC                                         :  9548.71 
+BIC                                         :  9623.58 
+
+LL(0,attend)                     : -7329.94
+LL(final,attend)                 : -6280.15
+LL(0,no_attend)                  : -7329.94
+LL(final,no_attend)              : -14983.05
+
+Estimated parameters                        : 11
+Time taken (hh:mm:ss)                       :  00:00:26.15 
+     pre-estimation                         :  00:00:1.74 
+     estimation                             :  00:00:24.14 
+     post-estimation                        :  00:00:0.27 
+Iterations                                  :  22  
+
+Unconstrained optimisation.
+
+Estimates:
+                   Estimate   BHHH.s.e. BHHH.t.rat.(0)
+b_price_cn         -0.15314          NA             NA
+b_price_jp         -0.02405          NA             NA
+b_organic_att       1.33819          NA             NA
+b_spec_att          1.06920          NA             NA
+asc_nobuy_att      -6.78973          NA             NA
+asc_nobuy_no       -1.52860          NA             NA
+delta_att          88.17420          NA             NA
+gamma_eio_att       0.03573          NA             NA
+gamma_eis_att      -0.39729          NA             NA
+gamma_eios_att     -0.31658          NA             NA
+gamma_china_att   -87.14224          NA             NA
+
+
+Summary of class allocation for model component lc_ana:
+           Mean prob.
+attend         0.8489
+no_attend      0.1511
+
+
+Overview of choices for MNL model component mnl_attend:
+                                    alt1   alt2    alt3
+Times available                  6672.00 6672.0 6672.00
+Times chosen                     2968.00 3029.0  675.00
+Percentage chosen overall          44.48   45.4   10.12
+Percentage chosen when available   44.48   45.4   10.12
+
+
+
+Overview of choices for MNL model component mnl_no_attend:
+                                    alt1   alt2    alt3
+Times available                  6672.00 6672.0 6672.00
+Times chosen                     2968.00 3029.0  675.00
+Percentage chosen overall          44.48   45.4   10.12
+Percentage chosen when available   44.48   45.4   10.12
+
+
+
+BHHH covariance matrix:
+                     b_price_cn      b_price_jp   b_organic_att      b_spec_att
+b_price_cn                   NA              NA              NA              NA
+b_price_jp                   NA              NA              NA              NA
+b_organic_att                NA              NA              NA              NA
+b_spec_att                   NA              NA              NA              NA
+asc_nobuy_att                NA              NA              NA              NA
+asc_nobuy_no                 NA              NA              NA              NA
+delta_att                    NA              NA              NA              NA
+gamma_eio_att                NA              NA              NA              NA
+gamma_eis_att                NA              NA              NA              NA
+gamma_eios_att               NA              NA              NA              NA
+gamma_china_att              NA              NA              NA              NA
+                  asc_nobuy_att    asc_nobuy_no       delta_att   gamma_eio_att
+b_price_cn                   NA              NA              NA              NA
+b_price_jp                   NA              NA              NA              NA
+b_organic_att                NA              NA              NA              NA
+b_spec_att                   NA              NA              NA              NA
+asc_nobuy_att                NA              NA              NA              NA
+asc_nobuy_no                 NA              NA              NA              NA
+delta_att                    NA              NA              NA              NA
+gamma_eio_att                NA              NA              NA              NA
+gamma_eis_att                NA              NA              NA              NA
+gamma_eios_att               NA              NA              NA              NA
+gamma_china_att              NA              NA              NA              NA
+                  gamma_eis_att  gamma_eios_att gamma_china_att
+b_price_cn                   NA              NA              NA
+b_price_jp                   NA              NA              NA
+b_organic_att                NA              NA              NA
+b_spec_att                   NA              NA              NA
+asc_nobuy_att                NA              NA              NA
+asc_nobuy_no                 NA              NA              NA
+delta_att                    NA              NA              NA
+gamma_eio_att                NA              NA              NA
+gamma_eis_att                NA              NA              NA
+gamma_eios_att               NA              NA              NA
+gamma_china_att              NA              NA              NA
+
+BHHH correlation matrix:
+                     b_price_cn      b_price_jp   b_organic_att      b_spec_att
+b_price_cn                   NA              NA              NA              NA
+b_price_jp                   NA              NA              NA              NA
+b_organic_att                NA              NA              NA              NA
+b_spec_att                   NA              NA              NA              NA
+asc_nobuy_att                NA              NA              NA              NA
+asc_nobuy_no                 NA              NA              NA              NA
+delta_att                    NA              NA              NA              NA
+gamma_eio_att                NA              NA              NA              NA
+gamma_eis_att                NA              NA              NA              NA
+gamma_eios_att               NA              NA              NA              NA
+gamma_china_att              NA              NA              NA              NA
+                  asc_nobuy_att    asc_nobuy_no       delta_att   gamma_eio_att
+b_price_cn                   NA              NA              NA              NA
+b_price_jp                   NA              NA              NA              NA
+b_organic_att                NA              NA              NA              NA
+b_spec_att                   NA              NA              NA              NA
+asc_nobuy_att                NA              NA              NA              NA
+asc_nobuy_no                 NA              NA              NA              NA
+delta_att                    NA              NA              NA              NA
+gamma_eio_att                NA              NA              NA              NA
+gamma_eis_att                NA              NA              NA              NA
+gamma_eios_att               NA              NA              NA              NA
+gamma_china_att              NA              NA              NA              NA
+                  gamma_eis_att  gamma_eios_att gamma_china_att
+b_price_cn                   NA              NA              NA
+b_price_jp                   NA              NA              NA
+b_organic_att                NA              NA              NA
+b_spec_att                   NA              NA              NA
+asc_nobuy_att                NA              NA              NA
+asc_nobuy_no                 NA              NA              NA
+delta_att                    NA              NA              NA
+gamma_eio_att                NA              NA              NA
+gamma_eis_att                NA              NA              NA
+gamma_eios_att               NA              NA              NA
+gamma_china_att              NA              NA              NA
+
+ 20 most extreme outliers in terms of lowest average per choice prediction:
+        ID Avg prob per choice
+ Japan_202          0.06006436
+ Japan_201          0.08331397
+ Japan_369          0.09035012
+ Japan_310          0.09396202
+ Japan_338          0.09396202
+ Japan_321          0.09396202
+  Japan_48          0.09495719
+ Japan_254          0.09980738
+ Japan_260          0.11521388
+  Japan_46          0.11643412
+ Japan_144          0.12999775
+  Japan_49          0.13137458
+  Japan_91          0.13599330
+  Japan_16          0.14155793
+ Japan_261          0.15051923
+ China_199          0.15302859
+  Japan_13          0.16733256
+  Japan_23          0.16733256
+ Japan_396          0.17124096
+  China_13          0.17176082
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                                                                          
+modelName              "M5_ANA_2class"                                                                                
+modelDescr             "ANA: label-attending vs label-non-attending; shared price; info treatment in class membership"
+indivID                "respondent_id"                                                                                
+nCores                 "1"                                                                                            
+outputDirectory        "output/"                                                                                      
+panelData              "TRUE"                                                                                         
+analyticGrad           "FALSE"                                                                                        
+debug                  "FALSE"                                                                                        
+workInLogs             "FALSE"                                                                                        
+seed                   "13"                                                                                           
+mixing                 "FALSE"                                                                                        
+HB                     "FALSE"                                                                                        
+noValidation           "FALSE"                                                                                        
+noDiagnostics          "FALSE"                                                                                        
+calculateLLC           "TRUE"                                                                                         
+analyticHessian        "FALSE"                                                                                        
+dropLoopExpansion      "FALSE"                                                                                        
+dropRedefCheck         "FALSE"                                                                                        
+memorySaver            "FALSE"                                                                                        
+analyticGrad_manualSet "TRUE"                                                                                         
+overridePanel          "FALSE"                                                                                        
+preventOverridePanel   "FALSE"                                                                                        
+noModification         "FALSE"                                                                                        
+
+Hessian routines attempted
+--------------------------
+none
+
+
+apollo_lcPars
+---------------
+function(apollo_beta, apollo_inputs) {
+
+  lcpars <- list()
+
+  V_class <- list()
+
+  # Class 1: label-attending (utility depends on info treatment + country)
+  V_class[["attend"]] <- delta_att +
+    gamma_eio_att   * eio +
+    gamma_eis_att   * eis +
+    gamma_eios_att  * eios +
+    gamma_china_att * china
+
+  # Class 2: label-non-attending, reference class (utility = 0)
+  V_class[["no_attend"]] <- 0
+
+  classAlloc_settings <- list(
+    classes       = c(attend = 1, no_attend = 2),
+    utilities     = V_class,
+    componentName = "classAlloc_m5_ana"
+  )
+
+  lcpars[["pi_values"]] <- apollo_classAlloc(classAlloc_settings)
+
+  return(lcpars)
+}
+<bytecode: 0x000001de9dc9afa8>
+
+
+apollo_probabilities
+----------------------
+function(apollo_beta, apollo_inputs,
+                                    functionality = "estimate") {
+  apollo_attach(apollo_beta, apollo_inputs)
+  on.exit(apollo_detach(apollo_beta, apollo_inputs))
+
+  P <- list()
+
+  # ── Class 1: label-attending (price + organic + spec) ──
+  V_att <- list()
+  V_att[["alt1"]] <- b_price_cn * price_cn_1 + b_price_jp * price_jp_1 +
+    b_organic_att * organic_1 + b_spec_att * spec_1
+  V_att[["alt2"]] <- b_price_cn * price_cn_2 + b_price_jp * price_jp_2 +
+    b_organic_att * organic_2 + b_spec_att * spec_2
+  V_att[["alt3"]] <- asc_nobuy_att
+
+  mnl_att <- list(
+    alternatives  = c(alt1 = 1, alt2 = 2, alt3 = 3),
+    avail         = list(alt1 = 1, alt2 = 1, alt3 = 1),
+    choiceVar     = choice,
+    utilities     = V_att,
+    componentName = "mnl_attend"
+  )
+  tmp_att           <- list(model = apollo_mnl(mnl_att, functionality))
+  tmp_att           <- apollo_panelProd(tmp_att, apollo_inputs, functionality)
+  P[["attend"]]     <- tmp_att[["model"]]
+
+  # ── Class 2: label-non-attending (price only; shared b_price_cn/jp) ──
+  V_no <- list()
+  V_no[["alt1"]] <- b_price_cn * price_cn_1 + b_price_jp * price_jp_1
+  V_no[["alt2"]] <- b_price_cn * price_cn_2 + b_price_jp * price_jp_2
+  V_no[["alt3"]] <- asc_nobuy_no
+
+  mnl_no <- list(
+    alternatives  = c(alt1 = 1, alt2 = 2, alt3 = 3),
+    avail         = list(alt1 = 1, alt2 = 1, alt3 = 1),
+    choiceVar     = choice,
+    utilities     = V_no,
+    componentName = "mnl_no_attend"
+  )
+  tmp_no            <- list(model = apollo_mnl(mnl_no, functionality))
+  tmp_no            <- apollo_panelProd(tmp_no, apollo_inputs, functionality)
+  P[["no_attend"]]  <- tmp_no[["model"]]
+
+  # ── Combine classes ──
+  lc_settings <- list(
+    inClassProb   = P,
+    classProb     = pi_values,
+    componentName = "lc_ana"
+  )
+  P[["model"]] <- apollo_lc(lc_settings, apollo_inputs, functionality)
+  P <- apollo_prepareProb(P, apollo_inputs, functionality)
+  return(P)
+}

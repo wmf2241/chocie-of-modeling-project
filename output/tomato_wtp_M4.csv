@@ -1,0 +1,9 @@
+class,country,attribute,wtp,currency
+Class1,China,Organic,11.462388520647139,RMB
+Class1,China,Special,10.052479271258461,RMB
+Class1,Japan,Organic,53.83259823930303,JPY
+Class1,Japan,Special,47.211022113218895,JPY
+Class2,China,Organic,-0.8843507616980337,RMB
+Class2,China,Special,0.45066284456566225,RMB
+Class2,Japan,Organic,-16.258572905071986,JPY
+Class2,Japan,Special,8.285326401380805,JPY

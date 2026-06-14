@@ -1,0 +1,343 @@
+Model run by admin using Apollo 0.3.7 on R 4.5.0 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : M3_info_interactions_MNL
+Model description                           : MNL with information-treatment interactions on label utilities
+Model run at                                : 2026-06-12 17:04:41.722375
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -13.060266
+     reciprocal of condition number         : 6.27105e-07
+Number of individuals                       : 834
+Number of rows in database                  : 6672
+Number of modelled outcomes                 : 6672
+
+Number of cores used                        :  1 
+Model without mixing
+
+LL(start)                                   : -10291.62
+LL at equal shares, LL(0)                   : -7329.94
+LL at observed shares, LL(C)                : -6342.53
+LL(final)                                   : -5010.41
+Rho-squared vs equal shares                  :  0.3164 
+Adj.Rho-squared vs equal shares              :  0.3145 
+Rho-squared vs observed shares               :  0.21 
+Adj.Rho-squared vs observed shares           :  0.2081 
+AIC                                         :  10048.81 
+BIC                                         :  10144.09 
+
+Estimated parameters                        : 14
+Time taken (hh:mm:ss)                       :  00:00:4.89 
+     pre-estimation                         :  00:00:1.01 
+     estimation                             :  00:00:1.17 
+     post-estimation                        :  00:00:2.71 
+Iterations                                  :  9  
+
+Unconstrained optimisation.
+
+Estimates:
+                Estimate        s.e.   t.rat.(0)    Rob.s.e. Rob.t.rat.(0)
+b_price_cn      -0.14464    0.005633    -25.6772    0.008171      -17.7017
+b_price_jp      -0.02301  6.7325e-04    -34.1830    0.001026      -22.4262
+b_organic        0.95022    0.066704     14.2455    0.081110       11.7153
+b_spec           0.86321    0.068521     12.5977    0.080961       10.6621
+b_org_eio        0.45371    0.083398      5.4403    0.133989        3.3862
+b_org_eios       0.14869    0.090094      1.6503    0.151273        0.9829
+b_spec_eis       0.09275    0.102514      0.9047    0.136839        0.6778
+b_spec_eios      0.17186    0.113186      1.5184    0.157843        1.0888
+asc_nobuy_cn    -2.38113    0.104990    -22.6796    0.155934      -15.2701
+asc_nobuy_jp    -6.85778    0.211550    -32.4168    0.360156      -19.0411
+gamma_seg1       0.22911    0.156152      1.4672    0.281467        0.8140
+gamma_seg2       0.33895    0.122891      2.7581    0.211047        1.6060
+gamma_seg3       0.21571    0.143730      1.5008    0.260221        0.8290
+gamma_seg4      -0.45934    0.163829     -2.8038    0.283823       -1.6184
+
+
+Overview of choices for MNL model component :
+                                    alt1   alt2    alt3
+Times available                  6672.00 6672.0 6672.00
+Times chosen                     2968.00 3029.0  675.00
+Percentage chosen overall          44.48   45.4   10.12
+Percentage chosen when available   44.48   45.4   10.12
+
+
+
+Classical covariance matrix:
+               b_price_cn   b_price_jp    b_organic       b_spec    b_org_eio
+b_price_cn      3.173e-05    1.092e-06  -1.5546e-04   -3.947e-05   -2.535e-05
+b_price_jp      1.092e-06    4.533e-07   -1.866e-05   -3.838e-06   -5.234e-07
+b_organic     -1.5546e-04   -1.866e-05     0.004449     0.001838    -0.002024
+b_spec         -3.947e-05   -3.838e-06     0.001838     0.004695   9.9990e-04
+b_org_eio      -2.535e-05   -5.234e-07    -0.002024   9.9990e-04     0.006955
+b_org_eios     -4.882e-06   -3.268e-08    -0.002514  -7.8534e-04     0.002169
+b_spec_eis      5.916e-06    1.423e-06   6.4291e-04    -0.003306    -0.002175
+b_spec_eios     3.108e-06    1.323e-06  -8.1083e-04    -0.003780  -9.4117e-04
+asc_nobuy_cn   2.9069e-04    3.198e-06   2.6963e-04     0.001293  -1.8768e-04
+asc_nobuy_jp   2.0357e-04   1.1149e-04    -0.002853   6.5151e-04  -1.0338e-04
+gamma_seg1     -4.557e-06   -3.749e-07   1.2418e-04    2.299e-05   -8.787e-05
+gamma_seg2     -7.157e-06   -6.895e-07   1.0418e-04    5.279e-05    1.788e-06
+gamma_seg3     -5.667e-06   -3.835e-07    4.733e-05   1.1570e-04   1.9636e-04
+gamma_seg4      4.195e-06    1.456e-06   -6.400e-05    3.107e-05   2.1136e-04
+               b_org_eios   b_spec_eis  b_spec_eios asc_nobuy_cn asc_nobuy_jp
+b_price_cn     -4.882e-06    5.916e-06    3.108e-06   2.9069e-04   2.0357e-04
+b_price_jp     -3.268e-08    1.423e-06    1.323e-06    3.198e-06   1.1149e-04
+b_organic       -0.002514   6.4291e-04  -8.1083e-04   2.6963e-04    -0.002853
+b_spec        -7.8534e-04    -0.003306    -0.003780     0.001293   6.5151e-04
+b_org_eio        0.002169    -0.002175  -9.4117e-04  -1.8768e-04  -1.0338e-04
+b_org_eios       0.008117  -6.6686e-04     0.004100    3.752e-05   1.8971e-04
+b_spec_eis    -6.6686e-04     0.010509     0.003346    9.515e-05   3.1015e-04
+b_spec_eios      0.004100     0.003346     0.012811   1.8280e-04   6.0068e-04
+asc_nobuy_cn    3.752e-05    9.515e-05   1.8280e-04     0.011023     0.007787
+asc_nobuy_jp   1.8971e-04   3.1015e-04   6.0068e-04     0.007787     0.044753
+gamma_seg1    -3.1472e-04   2.3725e-04  -2.5338e-04    -0.006603    -0.013758
+gamma_seg2    -2.3792e-04   1.5733e-04  -2.3505e-04    -0.006786    -0.011206
+gamma_seg3    -2.2699e-04   -4.974e-06  -3.5369e-04    -0.006647    -0.013158
+gamma_seg4    -1.3678e-04   -1.731e-05  -2.3270e-04    -0.006727    -0.010493
+               gamma_seg1   gamma_seg2   gamma_seg3   gamma_seg4
+b_price_cn     -4.557e-06   -7.157e-06   -5.667e-06    4.195e-06
+b_price_jp     -3.749e-07   -6.895e-07   -3.835e-07    1.456e-06
+b_organic      1.2418e-04   1.0418e-04    4.733e-05   -6.400e-05
+b_spec          2.299e-05    5.279e-05   1.1570e-04    3.107e-05
+b_org_eio      -8.787e-05    1.788e-06   1.9636e-04   2.1136e-04
+b_org_eios    -3.1472e-04  -2.3792e-04  -2.2699e-04  -1.3678e-04
+b_spec_eis     2.3725e-04   1.5733e-04   -4.974e-06   -1.731e-05
+b_spec_eios   -2.5338e-04  -2.3505e-04  -3.5369e-04  -2.3270e-04
+asc_nobuy_cn    -0.006603    -0.006786    -0.006647    -0.006727
+asc_nobuy_jp    -0.013758    -0.011206    -0.013158    -0.010493
+gamma_seg1       0.024383     0.010016     0.011518     0.009858
+gamma_seg2       0.010016     0.015102     0.009744     0.008732
+gamma_seg3       0.011518     0.009744     0.020658     0.009610
+gamma_seg4       0.009858     0.008732     0.009610     0.026840
+
+Robust covariance matrix:
+               b_price_cn   b_price_jp    b_organic       b_spec    b_org_eio
+b_price_cn      6.677e-05    5.238e-07   -9.277e-05   -5.326e-05   -2.761e-05
+b_price_jp      5.238e-07    1.053e-06   -2.442e-05   -1.703e-05    8.843e-06
+b_organic      -9.277e-05   -2.442e-05     0.006579     0.002508    -0.005396
+b_spec         -5.326e-05   -1.703e-05     0.002508     0.006555     0.002924
+b_org_eio      -2.761e-05    8.843e-06    -0.005396     0.002924     0.017953
+b_org_eios      7.767e-05    4.685e-07    -0.007213    -0.002729     0.005316
+b_spec_eis      3.643e-05    2.295e-06     0.002269    -0.005816    -0.007147
+b_spec_eios     5.163e-05    1.308e-05    -0.003258    -0.007427    -0.002658
+asc_nobuy_cn   5.4097e-04   -8.128e-06  -1.7101e-04   -5.334e-05  -3.7755e-04
+asc_nobuy_jp   1.8134e-04   2.9193e-04    -0.007475    -0.006021     0.001420
+gamma_seg1     -3.779e-05   -4.305e-06     0.001079     0.001719     0.001555
+gamma_seg2     -3.001e-06    2.840e-06   9.3908e-04   7.8592e-04   -6.348e-05
+gamma_seg3     -9.362e-06    1.037e-05   1.3596e-04     0.001738     0.003081
+gamma_seg4     -2.826e-06    1.688e-05   3.8015e-04     0.001975     0.003571
+               b_org_eios   b_spec_eis  b_spec_eios asc_nobuy_cn asc_nobuy_jp
+b_price_cn      7.767e-05    3.643e-05    5.163e-05   5.4097e-04   1.8134e-04
+b_price_jp      4.685e-07    2.295e-06    1.308e-05   -8.128e-06   2.9193e-04
+b_organic       -0.007213     0.002269    -0.003258  -1.7101e-04    -0.007475
+b_spec          -0.002729    -0.005816    -0.007427   -5.334e-05    -0.006021
+b_org_eio        0.005316    -0.007147    -0.002658  -3.7755e-04     0.001420
+b_org_eios       0.022883    -0.002798     0.012937     0.001618     0.004034
+b_spec_eis      -0.002798     0.018725     0.005383   7.4523e-04     0.001003
+b_spec_eios      0.012937     0.005383     0.024914     0.001034     0.007974
+asc_nobuy_cn     0.001618   7.4523e-04     0.001034     0.024315     0.015714
+asc_nobuy_jp     0.004034     0.001003     0.007974     0.015714     0.129712
+gamma_seg1      -0.002284    -0.001545    -0.003055    -0.018971    -0.044844
+gamma_seg2      -0.002125  -3.9190e-04    -0.001260    -0.020003    -0.027069
+gamma_seg3      -0.002519    -0.002379    -0.003992    -0.019512    -0.035408
+gamma_seg4      -0.002982    -0.003079    -0.003872    -0.019866    -0.027257
+               gamma_seg1   gamma_seg2   gamma_seg3   gamma_seg4
+b_price_cn     -3.779e-05   -3.001e-06   -9.362e-06   -2.826e-06
+b_price_jp     -4.305e-06    2.840e-06    1.037e-05    1.688e-05
+b_organic        0.001079   9.3908e-04   1.3596e-04   3.8015e-04
+b_spec           0.001719   7.8592e-04     0.001738     0.001975
+b_org_eio        0.001555   -6.348e-05     0.003081     0.003571
+b_org_eios      -0.002284    -0.002125    -0.002519    -0.002982
+b_spec_eis      -0.001545  -3.9190e-04    -0.002379    -0.003079
+b_spec_eios     -0.003055    -0.001260    -0.003992    -0.003872
+asc_nobuy_cn    -0.018971    -0.020003    -0.019512    -0.019866
+asc_nobuy_jp    -0.044844    -0.027069    -0.035408    -0.027257
+gamma_seg1       0.079224     0.026689     0.034511     0.029696
+gamma_seg2       0.026689     0.044541     0.024411     0.023263
+gamma_seg3       0.034511     0.024411     0.067715     0.027514
+gamma_seg4       0.029696     0.023263     0.027514     0.080556
+
+Classical correlation matrix:
+               b_price_cn   b_price_jp    b_organic       b_spec    b_org_eio
+b_price_cn       1.000000     0.287896    -0.413741    -0.102263    -0.053960
+b_price_jp       0.287896     1.000000    -0.415599    -0.083201    -0.009322
+b_organic       -0.413741    -0.415599     1.000000     0.402221    -0.363844
+b_spec          -0.102263    -0.083201     0.402221     1.000000     0.174975
+b_org_eio       -0.053960    -0.009322    -0.363844     0.174975     1.000000
+b_org_eios      -0.009619  -5.3885e-04    -0.418319    -0.127215     0.288608
+b_spec_eis       0.010245     0.020623     0.094019    -0.470630    -0.254357
+b_spec_eios      0.004875     0.017364    -0.107396    -0.487342    -0.099705
+asc_nobuy_cn     0.491517     0.045237     0.038501     0.179740    -0.021434
+asc_nobuy_jp     0.170827     0.782789    -0.202146     0.044945    -0.005859
+gamma_seg1      -0.005180    -0.003566     0.011922     0.002149    -0.006747
+gamma_seg2      -0.010339    -0.008334     0.012709     0.006269   1.7449e-04
+gamma_seg3      -0.006999    -0.003963     0.004937     0.011748     0.016381
+gamma_seg4       0.004546     0.013202    -0.005857     0.002768     0.015470
+               b_org_eios   b_spec_eis  b_spec_eios asc_nobuy_cn asc_nobuy_jp
+b_price_cn      -0.009619     0.010245     0.004875     0.491517     0.170827
+b_price_jp    -5.3885e-04     0.020623     0.017364     0.045237     0.782789
+b_organic       -0.418319     0.094019    -0.107396     0.038501    -0.202146
+b_spec          -0.127215    -0.470630    -0.487342     0.179740     0.044945
+b_org_eio        0.288608    -0.254357    -0.099705    -0.021434    -0.005859
+b_org_eios       1.000000    -0.072203     0.402028     0.003966     0.009954
+b_spec_eis      -0.072203     1.000000     0.288395     0.008840     0.014301
+b_spec_eios      0.402028     0.288395     1.000000     0.015382     0.025086
+asc_nobuy_cn     0.003966     0.008840     0.015382     1.000000     0.350598
+asc_nobuy_jp     0.009954     0.014301     0.025086     0.350598     1.000000
+gamma_seg1      -0.022371     0.014821    -0.014336    -0.402788    -0.416481
+gamma_seg2      -0.021489     0.012489    -0.016898    -0.525938    -0.431021
+gamma_seg3      -0.017529  -3.3757e-04    -0.021741    -0.440510    -0.432743
+gamma_seg4      -0.009267    -0.001031    -0.012549    -0.391079    -0.302770
+               gamma_seg1   gamma_seg2   gamma_seg3   gamma_seg4
+b_price_cn      -0.005180    -0.010339    -0.006999     0.004546
+b_price_jp      -0.003566    -0.008334    -0.003963     0.013202
+b_organic        0.011922     0.012709     0.004937    -0.005857
+b_spec           0.002149     0.006269     0.011748     0.002768
+b_org_eio       -0.006747   1.7449e-04     0.016381     0.015470
+b_org_eios      -0.022371    -0.021489    -0.017529    -0.009267
+b_spec_eis       0.014821     0.012489  -3.3757e-04    -0.001031
+b_spec_eios     -0.014336    -0.016898    -0.021741    -0.012549
+asc_nobuy_cn    -0.402788    -0.525938    -0.440510    -0.391079
+asc_nobuy_jp    -0.416481    -0.431021    -0.432743    -0.302770
+gamma_seg1       1.000000     0.521932     0.513210     0.385336
+gamma_seg2       0.521932     1.000000     0.551673     0.433703
+gamma_seg3       0.513210     0.551673     1.000000     0.408116
+gamma_seg4       0.385336     0.433703     0.408116     1.000000
+
+Robust correlation matrix:
+               b_price_cn   b_price_jp    b_organic       b_spec    b_org_eio
+b_price_cn       1.000000     0.062463    -0.139975    -0.080511    -0.025217
+b_price_jp       0.062463     1.000000    -0.293396    -0.204982     0.064311
+b_organic       -0.139975    -0.293396     1.000000     0.381929    -0.496493
+b_spec          -0.080511    -0.204982     0.381929     1.000000     0.269510
+b_org_eio       -0.025217     0.064311    -0.496493     0.269510     1.000000
+b_org_eios       0.062837     0.003018    -0.587832    -0.222820     0.262267
+b_spec_eis       0.032579     0.016345     0.204472    -0.525005    -0.389800
+b_spec_eios      0.040035     0.080754    -0.254449    -0.581169    -0.125688
+asc_nobuy_cn     0.424569    -0.050794    -0.013521    -0.004225    -0.018070
+asc_nobuy_jp     0.061621     0.789869    -0.255885    -0.206496     0.029420
+gamma_seg1      -0.016431    -0.014903     0.047267     0.075435     0.041241
+gamma_seg2      -0.001740     0.013113     0.054859     0.045997    -0.002245
+gamma_seg3      -0.004403     0.038843     0.006442     0.082477     0.088370
+gamma_seg4      -0.001218     0.057959     0.016513     0.085966     0.093914
+               b_org_eios   b_spec_eis  b_spec_eios asc_nobuy_cn asc_nobuy_jp
+b_price_cn       0.062837      0.03258      0.04003     0.424569      0.06162
+b_price_jp       0.003018      0.01634      0.08075    -0.050794      0.78987
+b_organic       -0.587832      0.20447     -0.25445    -0.013521     -0.25589
+b_spec          -0.222820     -0.52500     -0.58117    -0.004225     -0.20650
+b_org_eio        0.262267     -0.38980     -0.12569    -0.018070      0.02942
+b_org_eios       1.000000     -0.13518      0.54182     0.068594      0.07404
+b_spec_eis      -0.135176      1.00000      0.24925     0.034925      0.02036
+b_spec_eios      0.541817      0.24925      1.00000     0.041993      0.14027
+asc_nobuy_cn     0.068594      0.03493      0.04199     1.000000      0.27981
+asc_nobuy_jp     0.074042      0.02036      0.14027     0.279809      1.00000
+gamma_seg1      -0.053640     -0.04012     -0.06877    -0.432244     -0.44237
+gamma_seg2      -0.066556     -0.01357     -0.03783    -0.607807     -0.35613
+gamma_seg3      -0.064003     -0.06681     -0.09719    -0.480855     -0.37781
+gamma_seg4      -0.069455     -0.07927     -0.08644    -0.448867     -0.26665
+               gamma_seg1   gamma_seg2   gamma_seg3   gamma_seg4
+b_price_cn       -0.01643    -0.001740    -0.004403    -0.001218
+b_price_jp       -0.01490     0.013113     0.038843     0.057959
+b_organic         0.04727     0.054859     0.006442     0.016513
+b_spec            0.07544     0.045997     0.082477     0.085966
+b_org_eio         0.04124    -0.002245     0.088370     0.093914
+b_org_eios       -0.05364    -0.066556    -0.064003    -0.069455
+b_spec_eis       -0.04012    -0.013570    -0.066807    -0.079269
+b_spec_eios      -0.06877    -0.037833    -0.097189    -0.086440
+asc_nobuy_cn     -0.43224    -0.607807    -0.480855    -0.448867
+asc_nobuy_jp     -0.44237    -0.356130    -0.377808    -0.266647
+gamma_seg1        1.00000     0.449291     0.471180     0.371719
+gamma_seg2        0.44929     1.000000     0.444497     0.388359
+gamma_seg3        0.47118     0.444497     1.000000     0.372535
+gamma_seg4        0.37172     0.388359     0.372535     1.000000
+
+ 20 most extreme outliers in terms of lowest average per choice prediction:
+        ID Avg prob per choice
+ Japan_369           0.0623121
+ Japan_202           0.0661568
+ China_401           0.0881294
+ Japan_201           0.0924210
+ Japan_338           0.1009354
+  Japan_48           0.1018618
+ Japan_310           0.1108947
+ Japan_321           0.1108947
+ Japan_254           0.1238088
+  Japan_46           0.1266632
+ Japan_144           0.1332629
+  Japan_91           0.1367195
+  Japan_49           0.1389112
+ Japan_260           0.1416263
+  Japan_16           0.1635779
+ China_319           0.1640239
+ Japan_396           0.1681826
+ Japan_261           0.1757382
+ Japan_140           0.1788249
+  China_50           0.1824540
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                                           
+modelName              "M3_info_interactions_MNL"                                      
+modelDescr             "MNL with information-treatment interactions on label utilities"
+indivID                "respondent_id"                                                 
+nCores                 "1"                                                             
+outputDirectory        "output/"                                                       
+debug                  "FALSE"                                                         
+workInLogs             "FALSE"                                                         
+seed                   "13"                                                            
+mixing                 "FALSE"                                                         
+HB                     "FALSE"                                                         
+noValidation           "FALSE"                                                         
+noDiagnostics          "FALSE"                                                         
+calculateLLC           "TRUE"                                                          
+analyticHessian        "FALSE"                                                         
+dropLoopExpansion      "FALSE"                                                         
+dropRedefCheck         "FALSE"                                                         
+memorySaver            "FALSE"                                                         
+panelData              "TRUE"                                                          
+analyticGrad           "TRUE"                                                          
+analyticGrad_manualSet "FALSE"                                                         
+overridePanel          "FALSE"                                                         
+preventOverridePanel   "FALSE"                                                         
+noModification         "FALSE"                                                         
+
+Hessian routines attempted
+--------------------------
+numerical jacobian of LL analytical gradient
+
+
+apollo_probabilities
+----------------------
+function(apollo_beta, apollo_inputs,
+                                    functionality = "estimate") {
+  apollo_attach(apollo_beta, apollo_inputs)
+  on.exit(apollo_detach(apollo_beta, apollo_inputs))
+  org_effect  <- b_organic + b_org_eio  * eio  + b_org_eios  * eios
+  spec_effect <- b_spec    + b_spec_eis * eis  + b_spec_eios * eios
+  seg_effect  <- gamma_seg1 * seg1 + gamma_seg2 * seg2 +
+    gamma_seg3 * seg3 + gamma_seg4 * seg4
+  V <- list()
+  V[["alt1"]] <-
+    b_price_cn * price_cn_1 + b_price_jp * price_jp_1 +
+    org_effect * organic_1  + spec_effect * spec_1
+  V[["alt2"]] <-
+    b_price_cn * price_cn_2 + b_price_jp * price_jp_2 +
+    org_effect * organic_2  + spec_effect * spec_2
+  V[["alt3"]] <- asc_nobuy_cn * china + asc_nobuy_jp * japan + seg_effect
+  mnl_settings <- list(
+    alternatives = c(alt1 = 1, alt2 = 2, alt3 = 3),
+    avail        = list(alt1 = 1, alt2 = 1, alt3 = 1),
+    choiceVar    = choice,
+    utilities    = V
+  )
+  P <- list()
+  P[["model"]] <- apollo_mnl(mnl_settings, functionality)
+  P <- apollo_panelProd(P, apollo_inputs, functionality)
+  P <- apollo_prepareProb(P, apollo_inputs, functionality)
+  return(P)
+}

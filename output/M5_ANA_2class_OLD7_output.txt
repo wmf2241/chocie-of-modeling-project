@@ -1,0 +1,342 @@
+Model run by admin using Apollo 0.3.7 on R 4.5.0 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : M5_ANA_2class
+Model description                           : ANA: label-attending vs label-non-attending; shared price; info treatment in class membership
+Model run at                                : 2026-06-12 17:24:00.12339
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -6.901839
+     reciprocal of condition number         : 1.22844e-06
+Number of individuals                       : 834
+Number of rows in database                  : 6672
+Number of modelled outcomes                 : 20016
+                      mnl_attend : 6672
+                   mnl_no_attend : 6672
+                          lc_ana : 6672
+
+Number of cores used                        :  1 
+Model without mixing
+
+LL(start)                                   : -9243.37
+LL (whole model) at equal shares, LL(0)     : -7329.94
+LL (whole model) at observed shares, LL(C)  : -6342.53
+LL(final, whole model)                      : -4609.82
+Rho-squared vs equal shares                  :  0.3711 
+Adj.Rho-squared vs equal shares              :  0.3697 
+Rho-squared vs observed shares               :  0.2732 
+Adj.Rho-squared vs observed shares           :  0.2722 
+AIC                                         :  9239.63 
+BIC                                         :  9307.69 
+
+LL(0,attend)                     : -7329.94
+LL(final,attend)                 : -6527.55
+LL(0,no_attend)                  : -7329.94
+LL(final,no_attend)              : -8622.73
+
+Estimated parameters                        : 10
+Time taken (hh:mm:ss)                       :  00:00:57.44 
+     pre-estimation                         :  00:00:2.67 
+     estimation                             :  00:00:25.6 
+     post-estimation                        :  00:00:29.17 
+Iterations                                  :  30  
+
+Unconstrained optimisation.
+
+Estimates:
+                  Estimate        s.e.   t.rat.(0)    Rob.s.e. Rob.t.rat.(0)
+b_price_cn        -0.17528    0.005851    -29.9588     0.01043      -16.7976
+b_price_jp        -0.01735  5.5860e-04    -31.0653  8.7205e-04      -19.8991
+b_organic_att      1.26026    0.059893     21.0418     0.06169       20.4297
+b_spec_att         1.22934    0.063772     19.2772     0.06405       19.1926
+asc_nobuy_att     -6.76097    0.195652    -34.5561     0.25392      -26.6266
+asc_nobuy_no      -2.42846    0.099488    -24.4096     0.15850      -15.3212
+delta_att          1.27045    0.175907      7.2223     0.18081        7.0265
+gamma_eio_att      0.12151    0.253183      0.4799     0.25413        0.4781
+gamma_eis_att     -0.40369    0.235872     -1.7115     0.23690       -1.7041
+gamma_eios_att    -0.10333    0.245487     -0.4209     0.24538       -0.4211
+
+
+Summary of class allocation for model component lc_ana:
+           Mean prob.
+attend         0.7617
+no_attend      0.2383
+
+
+Overview of choices for MNL model component mnl_attend:
+                                    alt1   alt2    alt3
+Times available                  6672.00 6672.0 6672.00
+Times chosen                     2968.00 3029.0  675.00
+Percentage chosen overall          44.48   45.4   10.12
+Percentage chosen when available   44.48   45.4   10.12
+
+
+
+Overview of choices for MNL model component mnl_no_attend:
+                                    alt1   alt2    alt3
+Times available                  6672.00 6672.0 6672.00
+Times chosen                     2968.00 3029.0  675.00
+Percentage chosen overall          44.48   45.4   10.12
+Percentage chosen when available   44.48   45.4   10.12
+
+
+
+Classical covariance matrix:
+                   b_price_cn     b_price_jp  b_organic_att     b_spec_att
+b_price_cn          3.423e-05      1.115e-06    -1.5567e-04     -4.911e-05
+b_price_jp          1.115e-06      3.120e-07     -1.488e-05     -2.221e-06
+b_organic_att     -1.5567e-04     -1.488e-05       0.003587       0.002150
+b_spec_att         -4.911e-05     -2.221e-06       0.002150       0.004067
+asc_nobuy_att      2.4216e-04      5.031e-05      -0.001192       0.001012
+asc_nobuy_no       3.2265e-04      2.482e-05      -0.002275    -7.6954e-04
+delta_att          -6.063e-06     -3.833e-06     -2.745e-05    -1.9400e-04
+gamma_eio_att      -1.232e-05      4.355e-06    -1.0143e-04     -1.747e-06
+gamma_eis_att       2.833e-06     -5.542e-07     -7.163e-05      2.804e-06
+gamma_eios_att     -9.104e-06      1.446e-06      4.277e-05      7.674e-06
+                asc_nobuy_att   asc_nobuy_no      delta_att  gamma_eio_att
+b_price_cn         2.4216e-04     3.2265e-04     -6.063e-06     -1.232e-05
+b_price_jp          5.031e-05      2.482e-05     -3.833e-06      4.355e-06
+b_organic_att       -0.001192      -0.002275     -2.745e-05    -1.0143e-04
+b_spec_att           0.001012    -7.6954e-04    -1.9400e-04     -1.747e-06
+asc_nobuy_att        0.038280       0.008844       0.002551      3.057e-05
+asc_nobuy_no         0.008844       0.009898       0.001378    -1.2092e-04
+delta_att            0.002551       0.001378       0.030943       -0.03045
+gamma_eio_att       3.057e-05    -1.2092e-04      -0.030452        0.06410
+gamma_eis_att      5.3716e-04     3.9662e-04      -0.030145        0.03026
+gamma_eios_att     1.3356e-04    -1.2775e-04      -0.030348        0.03033
+                gamma_eis_att gamma_eios_att
+b_price_cn          2.833e-06     -9.104e-06
+b_price_jp         -5.542e-07      1.446e-06
+b_organic_att      -7.163e-05      4.277e-05
+b_spec_att          2.804e-06      7.674e-06
+asc_nobuy_att      5.3716e-04     1.3356e-04
+asc_nobuy_no       3.9662e-04    -1.2775e-04
+delta_att            -0.03015       -0.03035
+gamma_eio_att         0.03026        0.03033
+gamma_eis_att         0.05564        0.03027
+gamma_eios_att        0.03027        0.06026
+
+Robust covariance matrix:
+                   b_price_cn     b_price_jp  b_organic_att     b_spec_att
+b_price_cn         1.0888e-04      8.110e-07    -1.6478e-04    -1.8536e-04
+b_price_jp          8.110e-07      7.605e-07     -1.272e-05     -7.857e-06
+b_organic_att     -1.6478e-04     -1.272e-05       0.003805       0.002012
+b_spec_att        -1.8536e-04     -7.857e-06       0.002012       0.004103
+asc_nobuy_att      5.7544e-04      7.965e-05      -0.001010      -0.001642
+asc_nobuy_no       8.2377e-04      1.056e-05      -0.001768      -0.002598
+delta_att          3.3427e-04     -4.779e-05    -1.6238e-04    -7.3135e-04
+gamma_eio_att     -1.1552e-04      2.125e-05     2.4689e-04    -3.8281e-04
+gamma_eis_att     -1.7765e-04     -1.193e-05     4.6666e-04     6.9541e-04
+gamma_eios_att     -6.941e-05     -3.528e-07     3.2367e-04     2.9948e-04
+                asc_nobuy_att   asc_nobuy_no      delta_att  gamma_eio_att
+b_price_cn         5.7544e-04     8.2377e-04     3.3427e-04    -1.1552e-04
+b_price_jp          7.965e-05      1.056e-05     -4.779e-05      2.125e-05
+b_organic_att       -0.001010      -0.001768    -1.6238e-04     2.4689e-04
+b_spec_att          -0.001642      -0.002598    -7.3135e-04    -3.8281e-04
+asc_nobuy_att        0.064474       0.020405       0.001022       0.001469
+asc_nobuy_no         0.020405       0.025123       0.004752     6.9206e-04
+delta_att            0.001022       0.004752       0.032691      -0.031353
+gamma_eio_att        0.001469     6.9206e-04      -0.031353       0.064583
+gamma_eis_att        0.002071       0.002159      -0.028947       0.030107
+gamma_eios_att    -5.5002e-04     -9.582e-05      -0.030542       0.030386
+                gamma_eis_att gamma_eios_att
+b_price_cn        -1.7765e-04     -6.941e-05
+b_price_jp         -1.193e-05     -3.528e-07
+b_organic_att      4.6666e-04     3.2367e-04
+b_spec_att         6.9541e-04     2.9948e-04
+asc_nobuy_att        0.002071    -5.5002e-04
+asc_nobuy_no         0.002159     -9.582e-05
+delta_att           -0.028947       -0.03054
+gamma_eio_att        0.030107        0.03039
+gamma_eis_att        0.056120        0.03027
+gamma_eios_att       0.030268        0.06021
+
+Classical correlation matrix:
+                   b_price_cn     b_price_jp  b_organic_att     b_spec_att
+b_price_cn           1.000000       0.341045      -0.444239       -0.13162
+b_price_jp           0.341045       1.000000      -0.444678       -0.06236
+b_organic_att       -0.444239      -0.444678       1.000000        0.56293
+b_spec_att          -0.131623      -0.062356       0.562933        1.00000
+asc_nobuy_att        0.211550       0.460370      -0.101720        0.08107
+asc_nobuy_no         0.554320       0.446687      -0.381824       -0.12129
+delta_att           -0.005891      -0.039009      -0.002606       -0.01729
+gamma_eio_att       -0.008320       0.030791      -0.006689    -1.0821e-04
+gamma_eis_att        0.002053      -0.004206      -0.005071     1.8644e-04
+gamma_eios_att      -0.006339       0.010543       0.002909     4.9016e-04
+                asc_nobuy_att   asc_nobuy_no      delta_att  gamma_eio_att
+b_price_cn           0.211550       0.554320      -0.005891      -0.008320
+b_price_jp           0.460370       0.446687      -0.039009       0.030791
+b_organic_att       -0.101720      -0.381824      -0.002606      -0.006689
+b_spec_att           0.081069      -0.121292      -0.017294    -1.0821e-04
+asc_nobuy_att        1.000000       0.454373       0.074134     6.1703e-04
+asc_nobuy_no         0.454373       1.000000       0.078753      -0.004800
+delta_att            0.074134       0.078753       1.000000      -0.683748
+gamma_eio_att      6.1703e-04      -0.004800      -0.683748       1.000000
+gamma_eis_att        0.011640       0.016902      -0.726545       0.506625
+gamma_eios_att       0.002781      -0.005231      -0.702787       0.487979
+                gamma_eis_att gamma_eios_att
+b_price_cn           0.002053      -0.006339
+b_price_jp          -0.004206       0.010543
+b_organic_att       -0.005071       0.002909
+b_spec_att         1.8644e-04     4.9016e-04
+asc_nobuy_att        0.011640       0.002781
+asc_nobuy_no         0.016902      -0.005231
+delta_att           -0.726545      -0.702787
+gamma_eio_att        0.506625       0.487979
+gamma_eis_att        1.000000       0.522833
+gamma_eios_att       0.522833       1.000000
+
+Robust correlation matrix:
+                   b_price_cn     b_price_jp  b_organic_att     b_spec_att
+b_price_cn            1.00000       0.089123       -0.25600       -0.27733
+b_price_jp            0.08912       1.000000       -0.23646       -0.14066
+b_organic_att        -0.25600      -0.236459        1.00000        0.50930
+b_spec_att           -0.27733      -0.140660        0.50930        1.00000
+asc_nobuy_att         0.21718       0.359694       -0.06448       -0.10094
+asc_nobuy_no          0.49806       0.076410       -0.18081       -0.25592
+delta_att             0.17717      -0.303067       -0.01456       -0.06315
+gamma_eio_att        -0.04356       0.095879        0.01575       -0.02352
+gamma_eis_att        -0.07187      -0.057728        0.03193        0.04583
+gamma_eios_att       -0.02711      -0.001649        0.02138        0.01905
+                asc_nobuy_att   asc_nobuy_no      delta_att  gamma_eio_att
+b_price_cn           0.217181       0.498064        0.17717       -0.04356
+b_price_jp           0.359694       0.076410       -0.30307        0.09588
+b_organic_att       -0.064481      -0.180813       -0.01456        0.01575
+b_spec_att          -0.100943      -0.255924       -0.06315       -0.02352
+asc_nobuy_att        1.000000       0.506993        0.02226        0.02276
+asc_nobuy_no         0.506993       1.000000        0.16581        0.01718
+delta_att            0.022260       0.165806        1.00000       -0.68234
+gamma_eio_att        0.022764       0.017181       -0.68234        1.00000
+gamma_eis_att        0.034421       0.057496       -0.67582        0.50009
+gamma_eios_att      -0.008828      -0.002464       -0.68841        0.48727
+                gamma_eis_att gamma_eios_att
+b_price_cn           -0.07187      -0.027108
+b_price_jp           -0.05773      -0.001649
+b_organic_att         0.03193       0.021383
+b_spec_att            0.04583       0.019054
+asc_nobuy_att         0.03442      -0.008828
+asc_nobuy_no          0.05750      -0.002464
+delta_att            -0.67582      -0.688407
+gamma_eio_att         0.50009       0.487267
+gamma_eis_att         1.00000       0.520688
+gamma_eios_att        0.52069       1.000000
+
+ 20 most extreme outliers in terms of lowest average per choice prediction:
+        ID Avg prob per choice
+  Japan_91           0.1254634
+ China_199           0.1361012
+ China_401           0.1523111
+  China_13           0.1543887
+ Japan_230           0.1586345
+ Japan_389           0.1657180
+ China_250           0.1713761
+ China_294           0.1753266
+ China_298           0.1765072
+ China_128           0.1814391
+ China_347           0.1840750
+ China_334           0.1866395
+ Japan_308           0.1895950
+ China_266           0.1926743
+ China_101           0.1932736
+ China_241           0.2042080
+ China_156           0.2062096
+  Japan_16           0.2092814
+ Japan_282           0.2098720
+ Japan_249           0.2148462
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                                                                          
+modelName              "M5_ANA_2class"                                                                                
+modelDescr             "ANA: label-attending vs label-non-attending; shared price; info treatment in class membership"
+indivID                "respondent_id"                                                                                
+nCores                 "1"                                                                                            
+outputDirectory        "output/"                                                                                      
+panelData              "TRUE"                                                                                         
+analyticGrad           "FALSE"                                                                                        
+debug                  "FALSE"                                                                                        
+workInLogs             "FALSE"                                                                                        
+seed                   "13"                                                                                           
+mixing                 "FALSE"                                                                                        
+HB                     "FALSE"                                                                                        
+noValidation           "FALSE"                                                                                        
+noDiagnostics          "FALSE"                                                                                        
+calculateLLC           "TRUE"                                                                                         
+analyticHessian        "FALSE"                                                                                        
+dropLoopExpansion      "FALSE"                                                                                        
+dropRedefCheck         "FALSE"                                                                                        
+memorySaver            "FALSE"                                                                                        
+analyticGrad_manualSet "TRUE"                                                                                         
+overridePanel          "FALSE"                                                                                        
+preventOverridePanel   "FALSE"                                                                                        
+noModification         "FALSE"                                                                                        
+
+Hessian routines attempted
+--------------------------
+numerical second derivative of LL (using numDeriv)
+
+
+apollo_lcPars
+---------------
+function(apollo_beta, apollo_inputs) {
+  lcpars <- list()
+  V_class <- list()
+  V_class[["attend"]] <- delta_att +
+    gamma_eio_att  * eio  +
+    gamma_eis_att  * eis  +
+    gamma_eios_att * eios
+  V_class[["no_attend"]] <- 0
+  classAlloc_settings <- list(
+    classes       = c(attend = 1, no_attend = 2),
+    utilities     = V_class,
+    componentName = "classAlloc_m5_ana"
+  )
+  lcpars[["pi_values"]] <- apollo_classAlloc(classAlloc_settings)
+  return(lcpars)
+}
+<bytecode: 0x0000022160aa95b8>
+
+
+apollo_probabilities
+----------------------
+function(apollo_beta, apollo_inputs,
+                                    functionality = "estimate") {
+  apollo_attach(apollo_beta, apollo_inputs)
+  on.exit(apollo_detach(apollo_beta, apollo_inputs))
+  P <- list()
+  V_att <- list()
+  V_att[["alt1"]] <- b_price_cn * price_cn_1 + b_price_jp * price_jp_1 +
+    b_organic_att * organic_1 + b_spec_att * spec_1
+  V_att[["alt2"]] <- b_price_cn * price_cn_2 + b_price_jp * price_jp_2 +
+    b_organic_att * organic_2 + b_spec_att * spec_2
+  V_att[["alt3"]] <- asc_nobuy_att
+  mnl_att <- list(alternatives = c(alt1=1,alt2=2,alt3=3),
+                  avail = list(alt1=1,alt2=1,alt3=1),
+                  choiceVar = choice, utilities = V_att,
+                  componentName = "mnl_attend")
+  tmp_att       <- list(model = apollo_mnl(mnl_att, functionality))
+  tmp_att       <- apollo_panelProd(tmp_att, apollo_inputs, functionality)
+  P[["attend"]] <- tmp_att[["model"]]
+  V_no <- list()
+  V_no[["alt1"]] <- b_price_cn * price_cn_1 + b_price_jp * price_jp_1
+  V_no[["alt2"]] <- b_price_cn * price_cn_2 + b_price_jp * price_jp_2
+  V_no[["alt3"]] <- asc_nobuy_no
+  mnl_no <- list(alternatives = c(alt1=1,alt2=2,alt3=3),
+                 avail = list(alt1=1,alt2=1,alt3=1),
+                 choiceVar = choice, utilities = V_no,
+                 componentName = "mnl_no_attend")
+  tmp_no          <- list(model = apollo_mnl(mnl_no, functionality))
+  tmp_no          <- apollo_panelProd(tmp_no, apollo_inputs, functionality)
+  P[["no_attend"]] <- tmp_no[["model"]]
+  lc_settings <- list(inClassProb = P, classProb = pi_values,
+                      componentName = "lc_ana")
+  P[["model"]] <- apollo_lc(lc_settings, apollo_inputs, functionality)
+  P <- apollo_prepareProb(P, apollo_inputs, functionality)
+  return(P)
+}

@@ -1,0 +1,649 @@
+Model run by admin using Apollo 0.3.7 on R 4.5.0 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : M4_2class_LCM
+Model description                           : Two-class LCM with country+SEG class membership
+Model run at                                : 2026-06-12 17:21:43.551544
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -4.018288
+     reciprocal of condition number         : 6.0789e-07
+Number of individuals                       : 834
+Number of rows in database                  : 6672
+Number of modelled outcomes                 : 20016
+                      mnl_class1 : 6672
+                      mnl_class2 : 6672
+                           model : 6672
+
+Number of cores used                        :  1 
+Model without mixing
+
+LL(start)                                   : -9480.36
+LL (whole model) at equal shares, LL(0)     : -7329.94
+LL (whole model) at observed shares, LL(C)  : -6342.53
+LL(final, whole model)                      : -4370.19
+Rho-squared vs equal shares                  :  0.4038 
+Adj.Rho-squared vs equal shares              :  0.4016 
+Rho-squared vs observed shares               :  0.311 
+Adj.Rho-squared vs observed shares           :  0.3091 
+AIC                                         :  8772.38 
+BIC                                         :  8881.27 
+
+LL(0,class1)                     : -7329.94
+LL(final,class1)                 : -7860.87
+LL(0,class2)                     : -7329.94
+LL(final,class2)                 : -7836.39
+
+Estimated parameters                        : 16
+Time taken (hh:mm:ss)                       :  00:02:16.02 
+     pre-estimation                         :  00:00:3.27 
+     estimation                             :  00:00:53.91 
+     post-estimation                        :  00:01:18.83 
+Iterations                                  :  40  
+
+Unconstrained optimisation.
+
+Estimates:
+                      Estimate        s.e.   t.rat.(0)    Rob.s.e.
+b_price_cn_1          -0.12131    0.007273    -16.6802    0.011523
+b_price_jp_1          -0.02583  9.9078e-04    -26.0709    0.002128
+b_organic_1            1.39052    0.071862     19.3499    0.085509
+b_spec_1               1.21948    0.066580     18.3161    0.074610
+asc_nobuy_1           -9.53943    0.366908    -25.9995    0.731015
+b_price_cn_2          -0.26605    0.014792    -17.9862    0.031754
+b_price_jp_2          -0.01447  7.4761e-04    -19.3567    0.001061
+b_organic_2           -0.23528    0.142323     -1.6532    0.187054
+b_spec_2               0.11990    0.120973      0.9911    0.142520
+asc_nobuy_2           -2.80546    0.158868    -17.6591    0.278780
+delta_class2          -1.53904    0.245599     -6.2665    0.242723
+gamma_china_class2     0.67572    0.202619      3.3349    0.216853
+gamma_seg1_class2      0.19956    0.307176      0.6496    0.308077
+gamma_seg2_class2      0.28074    0.238816      1.1756    0.235881
+gamma_seg3_class2      0.18190    0.280252      0.6491    0.280836
+gamma_seg4_class2     -0.40471    0.299677     -1.3505    0.302312
+                   Rob.t.rat.(0)
+b_price_cn_1            -10.5282
+b_price_jp_1            -12.1407
+b_organic_1              16.2617
+b_spec_1                 16.3448
+asc_nobuy_1             -13.0496
+b_price_cn_2             -8.3786
+b_price_jp_2            -13.6443
+b_organic_2              -1.2578
+b_spec_2                  0.8413
+asc_nobuy_2             -10.0633
+delta_class2             -6.3407
+gamma_china_class2        3.1160
+gamma_seg1_class2         0.6477
+gamma_seg2_class2         1.1902
+gamma_seg3_class2         0.6477
+gamma_seg4_class2        -1.3387
+
+
+Summary of class allocation for model component :
+        Mean prob.
+class1      0.7483
+class2      0.2517
+
+
+Overview of choices for MNL model component mnl_class1:
+                                    alt1   alt2    alt3
+Times available                  6672.00 6672.0 6672.00
+Times chosen                     2968.00 3029.0  675.00
+Percentage chosen overall          44.48   45.4   10.12
+Percentage chosen when available   44.48   45.4   10.12
+
+
+
+Overview of choices for MNL model component mnl_class2:
+                                    alt1   alt2    alt3
+Times available                  6672.00 6672.0 6672.00
+Times chosen                     2968.00 3029.0  675.00
+Percentage chosen overall          44.48   45.4   10.12
+Percentage chosen when available   44.48   45.4   10.12
+
+
+
+Classical covariance matrix:
+                         b_price_cn_1       b_price_jp_1        b_organic_1
+b_price_cn_1                5.289e-05          2.330e-06        -2.7514e-04
+b_price_jp_1                2.330e-06          9.816e-07         -4.086e-05
+b_organic_1               -2.7514e-04         -4.086e-05           0.005164
+b_spec_1                   -7.488e-05         -1.309e-05           0.002862
+asc_nobuy_1                5.4533e-04         2.9368e-04          -0.009695
+b_price_cn_2               -3.053e-06         -2.952e-06         1.2794e-04
+b_price_jp_2               -4.393e-07         -1.024e-07          4.851e-06
+b_organic_2                 3.928e-05         -9.838e-06          5.863e-05
+b_spec_2                    1.735e-05         -8.772e-07        -1.4436e-04
+asc_nobuy_2                -6.475e-05         -1.896e-05         6.4961e-04
+delta_class2               -1.846e-05          1.727e-07          5.575e-05
+gamma_china_class2          5.247e-05         -7.873e-06         2.3527e-04
+gamma_seg1_class2          -1.122e-05         -9.802e-06         4.5968e-04
+gamma_seg2_class2           1.238e-05         -2.738e-06         1.1780e-04
+gamma_seg3_class2           1.285e-05         -6.780e-06         2.8142e-04
+gamma_seg4_class2          -1.531e-05         -1.080e-05         5.3364e-04
+                             b_spec_1        asc_nobuy_1       b_price_cn_2
+b_price_cn_1               -7.488e-05         5.4533e-04         -3.053e-06
+b_price_jp_1               -1.309e-05         2.9368e-04         -2.952e-06
+b_organic_1                  0.002862          -0.009695         1.2794e-04
+b_spec_1                     0.004433          -0.002071          7.100e-05
+asc_nobuy_1                 -0.002071           0.134622          -0.001182
+b_price_cn_2                7.100e-05          -0.001182         2.1880e-04
+b_price_jp_2                2.713e-06         -4.715e-05          7.448e-06
+b_organic_2                 2.805e-05          -0.005171        -5.1678e-04
+b_spec_2                  -2.0057e-04          -0.001706         -4.244e-05
+asc_nobuy_2                2.7776e-04          -0.007515           0.001572
+delta_class2                3.050e-05          -0.002428        -1.1893e-04
+gamma_china_class2         1.4259e-04        -8.6461e-04         2.7816e-04
+gamma_seg1_class2          2.4849e-04          -0.004978         2.4293e-04
+gamma_seg2_class2           6.222e-05          -0.001384          8.160e-05
+gamma_seg3_class2          1.6396e-04          -0.003157         1.6058e-04
+gamma_seg4_class2          3.7187e-04          -0.005242         1.5220e-04
+                         b_price_jp_2        b_organic_2           b_spec_2
+b_price_cn_1               -4.393e-07          3.928e-05          1.735e-05
+b_price_jp_1               -1.024e-07         -9.838e-06         -8.772e-07
+b_organic_1                 4.851e-06          5.863e-05        -1.4436e-04
+b_spec_1                    2.713e-06          2.805e-05        -2.0057e-04
+asc_nobuy_1                -4.715e-05          -0.005171          -0.001706
+b_price_cn_2                7.448e-06        -5.1678e-04         -4.244e-05
+b_price_jp_2                5.589e-07         -2.901e-05         -7.411e-07
+b_organic_2                -2.901e-05           0.020256           0.009661
+b_spec_2                   -7.411e-07           0.009661           0.014634
+asc_nobuy_2                 8.622e-05           0.003251           0.008755
+delta_class2                4.650e-06        -2.0008e-04          9.110e-05
+gamma_china_class2         -4.900e-06           0.001186         1.7647e-04
+gamma_seg1_class2           3.577e-06         5.1891e-04         1.4211e-04
+gamma_seg2_class2          -3.140e-07         3.9179e-04         1.4433e-04
+gamma_seg3_class2           3.022e-07         6.1197e-04         1.3918e-04
+gamma_seg4_class2           5.385e-06         1.8716e-04        -2.9747e-04
+                          asc_nobuy_2       delta_class2 gamma_china_class2
+b_price_cn_1               -6.475e-05         -1.846e-05          5.247e-05
+b_price_jp_1               -1.896e-05          1.727e-07         -7.873e-06
+b_organic_1                6.4961e-04          5.575e-05         2.3527e-04
+b_spec_1                   2.7776e-04          3.050e-05         1.4259e-04
+asc_nobuy_1                 -0.007515          -0.002428        -8.6461e-04
+b_price_cn_2                 0.001572        -1.1893e-04         2.7816e-04
+b_price_jp_2                8.622e-05          4.650e-06         -4.900e-06
+b_organic_2                  0.003251        -2.0008e-04           0.001186
+b_spec_2                     0.008755          9.110e-05         1.7647e-04
+asc_nobuy_2                  0.025239        -4.1325e-04         6.0343e-04
+delta_class2              -4.1325e-04           0.060319          -0.038273
+gamma_china_class2         6.0343e-04          -0.038273           0.041054
+gamma_seg1_class2            0.001138          -0.050972           0.028660
+gamma_seg2_class2          1.4162e-04          -0.040444           0.017321
+gamma_seg3_class2          4.7290e-04          -0.048448           0.025930
+gamma_seg4_class2          6.0835e-04          -0.036794           0.013541
+                    gamma_seg1_class2  gamma_seg2_class2  gamma_seg3_class2
+b_price_cn_1               -1.122e-05          1.238e-05          1.285e-05
+b_price_jp_1               -9.802e-06         -2.738e-06         -6.780e-06
+b_organic_1                4.5968e-04         1.1780e-04         2.8142e-04
+b_spec_1                   2.4849e-04          6.222e-05         1.6396e-04
+asc_nobuy_1                 -0.004978          -0.001384          -0.003157
+b_price_cn_2               2.4293e-04          8.160e-05         1.6058e-04
+b_price_jp_2                3.577e-06         -3.140e-07          3.022e-07
+b_organic_2                5.1891e-04         3.9179e-04         6.1197e-04
+b_spec_2                   1.4211e-04         1.4433e-04         1.3918e-04
+asc_nobuy_2                  0.001138         1.4162e-04         4.7290e-04
+delta_class2                -0.050972          -0.040444          -0.048448
+gamma_china_class2           0.028660           0.017321           0.025930
+gamma_seg1_class2            0.094357           0.036481           0.042583
+gamma_seg2_class2            0.036481           0.057033           0.035298
+gamma_seg3_class2            0.042583           0.035298           0.078541
+gamma_seg4_class2            0.034013           0.030076           0.033004
+                    gamma_seg4_class2
+b_price_cn_1               -1.531e-05
+b_price_jp_1               -1.080e-05
+b_organic_1                5.3364e-04
+b_spec_1                   3.7187e-04
+asc_nobuy_1                 -0.005242
+b_price_cn_2               1.5220e-04
+b_price_jp_2                5.385e-06
+b_organic_2                1.8716e-04
+b_spec_2                  -2.9747e-04
+asc_nobuy_2                6.0835e-04
+delta_class2                -0.036794
+gamma_china_class2           0.013541
+gamma_seg1_class2            0.034013
+gamma_seg2_class2            0.030076
+gamma_seg3_class2            0.033004
+gamma_seg4_class2            0.089807
+
+Robust covariance matrix:
+                         b_price_cn_1       b_price_jp_1        b_organic_1
+b_price_cn_1               1.3277e-04          5.048e-06        -3.5999e-04
+b_price_jp_1                5.048e-06          4.527e-06        -1.2523e-04
+b_organic_1               -3.5999e-04        -1.2523e-04           0.007312
+b_spec_1                  -2.1867e-04         -8.471e-05           0.004725
+asc_nobuy_1                  0.001495           0.001470          -0.039796
+b_price_cn_2               -3.111e-07         -2.982e-05         9.8037e-04
+b_price_jp_2               -1.212e-06         -8.794e-07          2.890e-05
+b_organic_2                 8.104e-05        -1.3069e-04           0.004016
+b_spec_2                    4.841e-05         -3.800e-05           0.001201
+asc_nobuy_2               -1.7723e-04        -2.1497e-04           0.006929
+delta_class2               -8.395e-05          1.453e-05        -7.3463e-04
+gamma_china_class2         1.8670e-04         -8.897e-05           0.002630
+gamma_seg1_class2          -1.855e-06         -3.239e-05           0.002451
+gamma_seg2_class2           7.898e-05         -9.406e-06         8.3917e-04
+gamma_seg3_class2          1.0825e-04         -4.543e-05           0.001552
+gamma_seg4_class2          -5.099e-05         -8.903e-05           0.003052
+                             b_spec_1        asc_nobuy_1       b_price_cn_2
+b_price_cn_1              -2.1867e-04           0.001495         -3.111e-07
+b_price_jp_1               -8.471e-05           0.001470         -2.982e-05
+b_organic_1                  0.004725          -0.039796         9.8037e-04
+b_spec_1                     0.005567          -0.026530         6.2858e-04
+asc_nobuy_1                 -0.026530           0.534383          -0.011530
+b_price_cn_2               6.2858e-04          -0.011530           0.001008
+b_price_jp_2                1.928e-05        -3.4255e-04          2.622e-05
+b_organic_2                  0.002516          -0.052225           0.003415
+b_spec_2                   5.7685e-04          -0.017521           0.001470
+asc_nobuy_2                  0.004412          -0.082986           0.007578
+delta_class2              -3.1844e-04           0.004808          -0.001284
+gamma_china_class2           0.001763          -0.033513           0.002927
+gamma_seg1_class2            0.001265          -0.016185           0.001746
+gamma_seg2_class2          3.3042e-04          -0.004582         5.3311e-04
+gamma_seg3_class2          9.0427e-04          -0.017949           0.001512
+gamma_seg4_class2            0.001813          -0.035435           0.001408
+                         b_price_jp_2        b_organic_2           b_spec_2
+b_price_cn_1               -1.212e-06          8.104e-05          4.841e-05
+b_price_jp_1               -8.794e-07        -1.3069e-04         -3.800e-05
+b_organic_1                 2.890e-05           0.004016           0.001201
+b_spec_1                    1.928e-05           0.002516         5.7685e-04
+asc_nobuy_1               -3.4255e-04          -0.052225          -0.017521
+b_price_cn_2                2.622e-05           0.003415           0.001470
+b_price_jp_2                1.125e-06          9.584e-05          4.611e-05
+b_organic_2                 9.584e-05           0.034989           0.017324
+b_spec_2                    4.611e-05           0.017324           0.020312
+asc_nobuy_2                2.5739e-04           0.035958           0.022161
+delta_class2               -3.292e-05          -0.005200          -0.002866
+gamma_china_class2          7.425e-05           0.014518           0.006607
+gamma_seg1_class2           4.486e-05         9.5422e-04           0.001636
+gamma_seg2_class2          -1.293e-07         8.1149e-04           0.001454
+gamma_seg3_class2           3.406e-05           0.005544           0.002261
+gamma_seg4_class2           6.204e-05           0.009636           0.001919
+                          asc_nobuy_2       delta_class2 gamma_china_class2
+b_price_cn_1              -1.7723e-04         -8.395e-05         1.8670e-04
+b_price_jp_1              -2.1497e-04          1.453e-05         -8.897e-05
+b_organic_1                  0.006929        -7.3463e-04           0.002630
+b_spec_1                     0.004412        -3.1844e-04           0.001763
+asc_nobuy_1                 -0.082986           0.004808          -0.033513
+b_price_cn_2                 0.007578          -0.001284           0.002927
+b_price_jp_2               2.5739e-04         -3.292e-05          7.425e-05
+b_organic_2                  0.035958          -0.005200           0.014518
+b_spec_2                     0.022161          -0.002866           0.006607
+asc_nobuy_2                  0.077719          -0.013014           0.026258
+delta_class2                -0.013014           0.058914          -0.039333
+gamma_china_class2           0.026258          -0.039333           0.047025
+gamma_seg1_class2            0.011529          -0.051469           0.032257
+gamma_seg2_class2            0.002604          -0.038310           0.016582
+gamma_seg3_class2            0.011137          -0.048055           0.028579
+gamma_seg4_class2            0.011572          -0.033372           0.013141
+                    gamma_seg1_class2  gamma_seg2_class2  gamma_seg3_class2
+b_price_cn_1               -1.855e-06          7.898e-05         1.0825e-04
+b_price_jp_1               -3.239e-05         -9.406e-06         -4.543e-05
+b_organic_1                  0.002451         8.3917e-04           0.001552
+b_spec_1                     0.001265         3.3042e-04         9.0427e-04
+asc_nobuy_1                 -0.016185          -0.004582          -0.017949
+b_price_cn_2                 0.001746         5.3311e-04           0.001512
+b_price_jp_2                4.486e-05         -1.293e-07          3.406e-05
+b_organic_2                9.5422e-04         8.1149e-04           0.005544
+b_spec_2                     0.001636           0.001454           0.002261
+asc_nobuy_2                  0.011529           0.002604           0.011137
+delta_class2                -0.051469          -0.038310          -0.048055
+gamma_china_class2           0.032257           0.016582           0.028579
+gamma_seg1_class2            0.094912           0.035323           0.043621
+gamma_seg2_class2            0.035323           0.055640           0.034001
+gamma_seg3_class2            0.043621           0.034001           0.078869
+gamma_seg4_class2            0.033496           0.028252           0.032206
+                    gamma_seg4_class2
+b_price_cn_1               -5.099e-05
+b_price_jp_1               -8.903e-05
+b_organic_1                  0.003052
+b_spec_1                     0.001813
+asc_nobuy_1                 -0.035435
+b_price_cn_2                 0.001408
+b_price_jp_2                6.204e-05
+b_organic_2                  0.009636
+b_spec_2                     0.001919
+asc_nobuy_2                  0.011572
+delta_class2                -0.033372
+gamma_china_class2           0.013141
+gamma_seg1_class2            0.033496
+gamma_seg2_class2            0.028252
+gamma_seg3_class2            0.032206
+gamma_seg4_class2            0.091393
+
+Classical correlation matrix:
+                         b_price_cn_1       b_price_jp_1        b_organic_1
+b_price_cn_1                 1.000000           0.323375          -0.526441
+b_price_jp_1                 0.323375           1.000000          -0.573944
+b_organic_1                 -0.526441          -0.573944           1.000000
+b_spec_1                    -0.154633          -0.198384           0.598090
+asc_nobuy_1                  0.204363           0.807856          -0.367707
+b_price_cn_2                -0.028378          -0.201459           0.120363
+b_price_jp_2                -0.080801          -0.138182           0.090297
+b_organic_2                  0.037949          -0.069771           0.005732
+b_spec_2                     0.019721          -0.007319          -0.016606
+asc_nobuy_2                 -0.056045          -0.120461           0.056901
+delta_class2                -0.010334         7.0959e-04           0.003159
+gamma_china_class2           0.035605          -0.039217           0.016158
+gamma_seg1_class2           -0.005023          -0.032207           0.020824
+gamma_seg2_class2            0.007129          -0.011570           0.006864
+gamma_seg3_class2            0.006304          -0.024416           0.013973
+gamma_seg4_class2           -0.007024          -0.036386           0.024780
+                             b_spec_1        asc_nobuy_1       b_price_cn_2
+b_price_cn_1                -0.154633            0.20436           -0.02838
+b_price_jp_1                -0.198384            0.80786           -0.20146
+b_organic_1                  0.598090           -0.36771            0.12036
+b_spec_1                     1.000000           -0.08479            0.07210
+asc_nobuy_1                 -0.084794            1.00000           -0.21780
+b_price_cn_2                 0.072097           -0.21780            1.00000
+b_price_jp_2                 0.054511           -0.17187            0.67346
+b_organic_2                  0.002960           -0.09902           -0.24547
+b_spec_2                    -0.024901           -0.03844           -0.02372
+asc_nobuy_2                  0.026260           -0.12892            0.66882
+delta_class2                 0.001865           -0.02694           -0.03274
+gamma_china_class2           0.010570           -0.01163            0.09281
+gamma_seg1_class2            0.012150           -0.04417            0.05347
+gamma_seg2_class2            0.003913           -0.01579            0.02310
+gamma_seg3_class2            0.008787           -0.03070            0.03874
+gamma_seg4_class2            0.018638           -0.04768            0.03433
+                         b_price_jp_2        b_organic_2           b_spec_2
+b_price_cn_1                -0.080801           0.037949           0.019721
+b_price_jp_1                -0.138182          -0.069771          -0.007319
+b_organic_1                  0.090297           0.005732          -0.016606
+b_spec_1                     0.054511           0.002960          -0.024901
+asc_nobuy_1                 -0.171875          -0.099019          -0.038445
+b_price_cn_2                 0.673465          -0.245474          -0.023719
+b_price_jp_2                 1.000000          -0.272614          -0.008195
+b_organic_2                 -0.272614           1.000000           0.561142
+b_spec_2                    -0.008195           0.561142           1.000000
+asc_nobuy_2                  0.725913           0.143778           0.455535
+delta_class2                 0.025325          -0.005724           0.003066
+gamma_china_class2          -0.032344           0.041142           0.007200
+gamma_seg1_class2            0.015575           0.011869           0.003824
+gamma_seg2_class2           -0.001759           0.011527           0.004996
+gamma_seg3_class2            0.001442           0.015343           0.004105
+gamma_seg4_class2            0.024036           0.004388          -0.008206
+                          asc_nobuy_2       delta_class2 gamma_china_class2
+b_price_cn_1                -0.056045          -0.010334           0.035605
+b_price_jp_1                -0.120461         7.0959e-04          -0.039217
+b_organic_1                  0.056901           0.003159           0.016158
+b_spec_1                     0.026260           0.001865           0.010570
+asc_nobuy_1                 -0.128920          -0.026941          -0.011630
+b_price_cn_2                 0.668821          -0.032738           0.092807
+b_price_jp_2                 0.725913           0.025325          -0.032344
+b_organic_2                  0.143778          -0.005724           0.041142
+b_spec_2                     0.455535           0.003066           0.007200
+asc_nobuy_2                  1.000000          -0.010591           0.018746
+delta_class2                -0.010591           1.000000          -0.769099
+gamma_china_class2           0.018746          -0.769099           1.000000
+gamma_seg1_class2            0.023322          -0.675649           0.460482
+gamma_seg2_class2            0.003733          -0.689543           0.357964
+gamma_seg3_class2            0.010621          -0.703881           0.456644
+gamma_seg4_class2            0.012778          -0.499918           0.223003
+                    gamma_seg1_class2  gamma_seg2_class2  gamma_seg3_class2
+b_price_cn_1                -0.005023           0.007129           0.006304
+b_price_jp_1                -0.032207          -0.011570          -0.024416
+b_organic_1                  0.020824           0.006864           0.013973
+b_spec_1                     0.012150           0.003913           0.008787
+asc_nobuy_1                 -0.044169          -0.015791          -0.030703
+b_price_cn_2                 0.053465           0.023099           0.038736
+b_price_jp_2                 0.015575          -0.001759           0.001442
+b_organic_2                  0.011869           0.011527           0.015343
+b_spec_2                     0.003824           0.004996           0.004105
+asc_nobuy_2                  0.023322           0.003733           0.010621
+delta_class2                -0.675649          -0.689543          -0.703881
+gamma_china_class2           0.460482           0.357964           0.456644
+gamma_seg1_class2            1.000000           0.497302           0.494648
+gamma_seg2_class2            0.497302           1.000000           0.527396
+gamma_seg3_class2            0.494648           0.527396           1.000000
+gamma_seg4_class2            0.369494           0.420248           0.392970
+                    gamma_seg4_class2
+b_price_cn_1                -0.007024
+b_price_jp_1                -0.036386
+b_organic_1                  0.024780
+b_spec_1                     0.018638
+asc_nobuy_1                 -0.047678
+b_price_cn_2                 0.034334
+b_price_jp_2                 0.024036
+b_organic_2                  0.004388
+b_spec_2                    -0.008206
+asc_nobuy_2                  0.012778
+delta_class2                -0.499918
+gamma_china_class2           0.223003
+gamma_seg1_class2            0.369494
+gamma_seg2_class2            0.420248
+gamma_seg3_class2            0.392970
+gamma_seg4_class2            1.000000
+
+Robust correlation matrix:
+                         b_price_cn_1       b_price_jp_1        b_organic_1
+b_price_cn_1                  1.00000            0.20590           -0.36536
+b_price_jp_1                  0.20590            1.00000           -0.68833
+b_organic_1                  -0.36536           -0.68833            1.00000
+b_spec_1                     -0.25436           -0.53364            0.74058
+asc_nobuy_1                   0.17753            0.94516           -0.63665
+b_price_cn_2              -8.5038e-04           -0.44147            0.36106
+b_price_jp_2                 -0.09918           -0.38971            0.31866
+b_organic_2                   0.03760           -0.32840            0.25110
+b_spec_2                      0.02948           -0.12533            0.09856
+asc_nobuy_2                  -0.05517           -0.36243            0.29065
+delta_class2                 -0.03002            0.02813           -0.03540
+gamma_china_class2            0.07472           -0.19283            0.14181
+gamma_seg1_class2         -5.2268e-04           -0.04942            0.09306
+gamma_seg2_class2             0.02906           -0.01874            0.04160
+gamma_seg3_class2             0.03345           -0.07602            0.06462
+gamma_seg4_class2            -0.01464           -0.13842            0.11805
+                             b_spec_1        asc_nobuy_1       b_price_cn_2
+b_price_cn_1                 -0.25436            0.17753        -8.5038e-04
+b_price_jp_1                 -0.53364            0.94516           -0.44147
+b_organic_1                   0.74058           -0.63665            0.36106
+b_spec_1                      1.00000           -0.48643            0.26532
+asc_nobuy_1                  -0.48643            1.00000           -0.49670
+b_price_cn_2                  0.26532           -0.49670            1.00000
+b_price_jp_2                  0.24370           -0.44182            0.77846
+b_organic_2                   0.18025           -0.38193            0.57502
+b_spec_2                      0.05425           -0.16818            0.32492
+asc_nobuy_2                   0.21213           -0.40721            0.85606
+delta_class2                 -0.01758            0.02710           -0.16653
+gamma_china_class2            0.10895           -0.21141            0.42502
+gamma_seg1_class2             0.05504           -0.07186            0.17851
+gamma_seg2_class2             0.01878           -0.02657            0.07117
+gamma_seg3_class2             0.04316           -0.08743            0.16961
+gamma_seg4_class2             0.08036           -0.16034            0.14668
+                         b_price_jp_2        b_organic_2           b_spec_2
+b_price_cn_1                 -0.09918            0.03760            0.02948
+b_price_jp_1                 -0.38971           -0.32840           -0.12533
+b_organic_1                   0.31866            0.25110            0.09856
+b_spec_1                      0.24370            0.18025            0.05425
+asc_nobuy_1                  -0.44182           -0.38193           -0.16818
+b_price_cn_2                  0.77846            0.57502            0.32492
+b_price_jp_2                  1.00000            0.48308            0.30502
+b_organic_2                   0.48308            1.00000            0.64984
+b_spec_2                      0.30502            0.64984            1.00000
+asc_nobuy_2                   0.87051            0.68956            0.55776
+delta_class2                 -0.12787           -0.11454           -0.08286
+gamma_china_class2            0.32281            0.35790            0.21378
+gamma_seg1_class2             0.13728            0.01656            0.03725
+gamma_seg2_class2         -5.1678e-04            0.01839            0.04325
+gamma_seg3_class2             0.11434            0.10554            0.05650
+gamma_seg4_class2             0.19349            0.17040            0.04454
+                          asc_nobuy_2       delta_class2 gamma_china_class2
+b_price_cn_1                 -0.05517           -0.03002            0.07472
+b_price_jp_1                 -0.36243            0.02813           -0.19283
+b_organic_1                   0.29065           -0.03540            0.14181
+b_spec_1                      0.21213           -0.01758            0.10895
+asc_nobuy_1                  -0.40721            0.02710           -0.21141
+b_price_cn_2                  0.85606           -0.16653            0.42502
+b_price_jp_2                  0.87051           -0.12787            0.32281
+b_organic_2                   0.68956           -0.11454            0.35790
+b_spec_2                      0.55776           -0.08286            0.21378
+asc_nobuy_2                   1.00000           -0.19232            0.43435
+delta_class2                 -0.19232            1.00000           -0.74727
+gamma_china_class2            0.43435           -0.74727            1.00000
+gamma_seg1_class2             0.13423           -0.68830            0.48283
+gamma_seg2_class2             0.03960           -0.66913            0.32416
+gamma_seg3_class2             0.14225           -0.70498            0.46928
+gamma_seg4_class2             0.13730           -0.45479            0.20046
+                    gamma_seg1_class2  gamma_seg2_class2  gamma_seg3_class2
+b_price_cn_1              -5.2268e-04            0.02906            0.03345
+b_price_jp_1                 -0.04942           -0.01874           -0.07602
+b_organic_1                   0.09306            0.04160            0.06462
+b_spec_1                      0.05504            0.01878            0.04316
+asc_nobuy_1                  -0.07186           -0.02657           -0.08743
+b_price_cn_2                  0.17851            0.07117            0.16961
+b_price_jp_2                  0.13728        -5.1678e-04            0.11434
+b_organic_2                   0.01656            0.01839            0.10554
+b_spec_2                      0.03725            0.04325            0.05650
+asc_nobuy_2                   0.13423            0.03960            0.14225
+delta_class2                 -0.68830           -0.66913           -0.70498
+gamma_china_class2            0.48283            0.32416            0.46928
+gamma_seg1_class2             1.00000            0.48608            0.50418
+gamma_seg2_class2             0.48608            1.00000            0.51326
+gamma_seg3_class2             0.50418            0.51326            1.00000
+gamma_seg4_class2             0.35965            0.39618            0.37933
+                    gamma_seg4_class2
+b_price_cn_1                 -0.01464
+b_price_jp_1                 -0.13842
+b_organic_1                   0.11805
+b_spec_1                      0.08036
+asc_nobuy_1                  -0.16034
+b_price_cn_2                  0.14668
+b_price_jp_2                  0.19349
+b_organic_2                   0.17040
+b_spec_2                      0.04454
+asc_nobuy_2                   0.13730
+delta_class2                 -0.45479
+gamma_china_class2            0.20046
+gamma_seg1_class2             0.35965
+gamma_seg2_class2             0.39618
+gamma_seg3_class2             0.37933
+gamma_seg4_class2             1.00000
+
+ 20 most extreme outliers in terms of lowest average per choice prediction:
+        ID Avg prob per choice
+ China_199          0.06742243
+  China_13          0.08788229
+  Japan_91          0.11008179
+ China_347          0.11678795
+ China_298          0.12269969
+ China_156          0.12292862
+ China_294          0.12529872
+ China_128          0.12723946
+  Japan_16          0.13519810
+ China_250          0.13570288
+ China_266          0.13688588
+ China_334          0.14256014
+  China_58          0.15057621
+ China_241          0.15353167
+ China_278          0.16100548
+ China_147          0.16102879
+  Japan_13          0.16134757
+  Japan_23          0.16134757
+ Japan_396          0.16368083
+  China_69          0.16790087
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                            
+modelName              "M4_2class_LCM"                                  
+modelDescr             "Two-class LCM with country+SEG class membership"
+indivID                "respondent_id"                                  
+nCores                 "1"                                              
+outputDirectory        "output/"                                        
+debug                  "FALSE"                                          
+workInLogs             "FALSE"                                          
+seed                   "13"                                             
+mixing                 "FALSE"                                          
+HB                     "FALSE"                                          
+noValidation           "FALSE"                                          
+noDiagnostics          "FALSE"                                          
+calculateLLC           "TRUE"                                           
+analyticHessian        "FALSE"                                          
+dropLoopExpansion      "FALSE"                                          
+dropRedefCheck         "FALSE"                                          
+memorySaver            "FALSE"                                          
+panelData              "TRUE"                                           
+analyticGrad           "TRUE"                                           
+analyticGrad_manualSet "FALSE"                                          
+overridePanel          "FALSE"                                          
+preventOverridePanel   "FALSE"                                          
+noModification         "FALSE"                                          
+
+Hessian routines attempted
+--------------------------
+numerical second derivative of LL (using numDeriv)
+
+
+apollo_lcPars
+---------------
+function(apollo_beta, apollo_inputs) {
+  lcpars <- list()
+  lcpars[["b_price_cn"]] <- list(b_price_cn_1, b_price_cn_2)
+  lcpars[["b_price_jp"]] <- list(b_price_jp_1, b_price_jp_2)
+  lcpars[["b_organic"]]  <- list(b_organic_1,  b_organic_2)
+  lcpars[["b_spec"]]     <- list(b_spec_1,     b_spec_2)
+  lcpars[["asc_nobuy"]]  <- list(asc_nobuy_1,  asc_nobuy_2)
+  V_class <- list()
+  V_class[["class1"]] <- 0
+  V_class[["class2"]] <- delta_class2 +
+    gamma_china_class2 * china +
+    gamma_seg1_class2  * seg1 +
+    gamma_seg2_class2  * seg2 +
+    gamma_seg3_class2  * seg3 +
+    gamma_seg4_class2  * seg4
+  classAlloc_settings <- list(
+    classes       = c(class1 = 1, class2 = 2),
+    utilities     = V_class,
+    componentName = "classAlloc_m4"
+  )
+  lcpars[["pi_values"]] <- apollo_classAlloc(classAlloc_settings)
+  return(lcpars)
+}
+<bytecode: 0x000002215fe3fe60>
+
+
+apollo_probabilities
+----------------------
+function(apollo_beta, apollo_inputs,
+                                    functionality = "estimate") {
+  apollo_attach(apollo_beta, apollo_inputs)
+  on.exit(apollo_detach(apollo_beta, apollo_inputs))
+  P <- list()
+  V1 <- list()
+  V1[["alt1"]] <- b_price_cn[[1]] * price_cn_1 + b_price_jp[[1]] * price_jp_1 +
+    b_organic[[1]] * organic_1 + b_spec[[1]] * spec_1
+  V1[["alt2"]] <- b_price_cn[[1]] * price_cn_2 + b_price_jp[[1]] * price_jp_2 +
+    b_organic[[1]] * organic_2 + b_spec[[1]] * spec_2
+  V1[["alt3"]] <- asc_nobuy[[1]]
+  mnl1 <- list(alternatives = c(alt1=1,alt2=2,alt3=3),
+               avail = list(alt1=1,alt2=1,alt3=1),
+               choiceVar = choice, utilities = V1,
+               componentName = "mnl_class1")
+  tmp1 <- list(model = apollo_mnl(mnl1, functionality))
+  tmp1 <- apollo_panelProd(tmp1, apollo_inputs, functionality)
+  P[["class1"]] <- tmp1[["model"]]
+  V2 <- list()
+  V2[["alt1"]] <- b_price_cn[[2]] * price_cn_1 + b_price_jp[[2]] * price_jp_1 +
+    b_organic[[2]] * organic_1 + b_spec[[2]] * spec_1
+  V2[["alt2"]] <- b_price_cn[[2]] * price_cn_2 + b_price_jp[[2]] * price_jp_2 +
+    b_organic[[2]] * organic_2 + b_spec[[2]] * spec_2
+  V2[["alt3"]] <- asc_nobuy[[2]]
+  mnl2 <- list(alternatives = c(alt1=1,alt2=2,alt3=3),
+               avail = list(alt1=1,alt2=1,alt3=1),
+               choiceVar = choice, utilities = V2,
+               componentName = "mnl_class2")
+  tmp2 <- list(model = apollo_mnl(mnl2, functionality))
+  tmp2 <- apollo_panelProd(tmp2, apollo_inputs, functionality)
+  P[["class2"]] <- tmp2[["model"]]
+  lc_settings <- list(inClassProb = P, classProb = pi_values)
+  P[["model"]] <- apollo_lc(lc_settings, apollo_inputs, functionality)
+  P <- apollo_prepareProb(P, apollo_inputs, functionality)
+  return(P)
+}

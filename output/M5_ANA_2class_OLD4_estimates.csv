@@ -1,0 +1,12 @@
+"","Estimate","Std.err.","t-ratio(0)","Rob.std.err.","Rob.t-ratio(0)"
+"b_price_cn",-0.153142409097393,NA,NA,NA,NA
+"b_price_jp",-0.0240548967504789,NA,NA,NA,NA
+"b_organic_att",1.33819370555635,NA,NA,NA,NA
+"b_spec_att",1.06920260960462,NA,NA,NA,NA
+"asc_nobuy_att",-6.78973109074655,NA,NA,NA,NA
+"asc_nobuy_no",-1.52860259179875,NA,NA,NA,NA
+"delta_att",88.174195240947,NA,NA,NA,NA
+"gamma_eio_att",0.0357277839529175,NA,NA,NA,NA
+"gamma_eis_att",-0.39729224469727,NA,NA,NA,NA
+"gamma_eios_att",-0.316584710053292,NA,NA,NA,NA
+"gamma_china_att",-87.1422395068059,NA,NA,NA,NA

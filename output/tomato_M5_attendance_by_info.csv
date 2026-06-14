@@ -1,0 +1,9 @@
+country,info_group,avg_attend_prob,n
+China,EIC (Control),0.7259545208303421,103
+China,EIO (Organic info),0.7319847493289673,107
+China,EIOS (Both info),0.6605220453101939,104
+China,EIS (Special info),0.6367844058301876,108
+Japan,EIC (Control),0.8326628845572807,109
+Japan,EIO (Organic info),0.8753919890772504,99
+Japan,EIOS (Both info),0.8698811470008961,99
+Japan,EIS (Special info),0.7732804450964764,105

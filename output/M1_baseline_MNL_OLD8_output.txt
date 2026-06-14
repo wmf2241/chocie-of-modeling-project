@@ -1,0 +1,165 @@
+Model run by admin using Apollo 0.3.7 on R 4.5.0 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : M1_baseline_MNL
+Model description                           : Baseline pooled MNL for tomato choices (ordinary = reference label)
+Model run at                                : 2026-06-12 17:21:31.90134
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -148.307828
+     reciprocal of condition number         : 4.68532e-06
+Number of individuals                       : 834
+Number of rows in database                  : 6672
+Number of modelled outcomes                 : 6672
+
+Number of cores used                        :  1 
+Model without mixing
+
+LL(start)                                   : -9670.95
+LL at equal shares, LL(0)                   : -7329.94
+LL at observed shares, LL(C)                : -6342.53
+LL(final)                                   : -5833.83
+Rho-squared vs equal shares                  :  0.2041 
+Adj.Rho-squared vs equal shares              :  0.2036 
+Rho-squared vs observed shares               :  0.0802 
+Adj.Rho-squared vs observed shares           :  0.0799 
+AIC                                         :  11675.65 
+BIC                                         :  11702.88 
+
+Estimated parameters                        : 4
+Time taken (hh:mm:ss)                       :  00:00:2.08 
+     pre-estimation                         :  00:00:0.67 
+     estimation                             :  00:00:0.8 
+     post-estimation                        :  00:00:0.6 
+Iterations                                  :  9  
+
+Unconstrained optimisation.
+
+Estimates:
+             Estimate        s.e.   t.rat.(0)    Rob.s.e. Rob.t.rat.(0)
+b_price     -0.005734  3.1734e-04     -18.069  6.6181e-04        -8.664
+b_organic    0.231498     0.03889       5.953     0.04701         4.924
+b_spec       0.942673     0.04922      19.152     0.04608        20.456
+asc_nobuy   -2.004531     0.07782     -25.760     0.16793       -11.937
+
+
+Overview of choices for MNL model component :
+                                    alt1   alt2    alt3
+Times available                  6672.00 6672.0 6672.00
+Times chosen                     2968.00 3029.0  675.00
+Percentage chosen overall          44.48   45.4   10.12
+Percentage chosen when available   44.48   45.4   10.12
+
+
+
+Classical covariance matrix:
+              b_price   b_organic      b_spec   asc_nobuy
+b_price     1.007e-07  -2.128e-06   1.496e-06   1.889e-05
+b_organic  -2.128e-06    0.001512    0.001096  5.3820e-04
+b_spec      1.496e-06    0.001096    0.002423    0.001495
+asc_nobuy   1.889e-05  5.3820e-04    0.001495    0.006055
+
+Robust covariance matrix:
+              b_price   b_organic      b_spec   asc_nobuy
+b_price     4.380e-07  -1.192e-05   1.824e-06  1.0178e-04
+b_organic  -1.192e-05    0.002210  8.8440e-04   -0.002806
+b_spec      1.824e-06  8.8440e-04    0.002124  4.6442e-04
+asc_nobuy  1.0178e-04   -0.002806  4.6442e-04    0.028200
+
+Classical correlation matrix:
+              b_price   b_organic      b_spec   asc_nobuy
+b_price       1.00000     -0.1725     0.09578      0.7648
+b_organic    -0.17248      1.0000     0.57243      0.1779
+b_spec        0.09578      0.5724     1.00000      0.3904
+asc_nobuy     0.76480      0.1779     0.39035      1.0000
+
+Robust correlation matrix:
+              b_price   b_organic      b_spec   asc_nobuy
+b_price       1.00000     -0.3831     0.05982     0.91583
+b_organic    -0.38313      1.0000     0.40821    -0.35547
+b_spec        0.05982      0.4082     1.00000     0.06001
+asc_nobuy     0.91583     -0.3555     0.06001     1.00000
+
+ 20 most extreme outliers in terms of lowest average per choice prediction:
+        ID Avg prob per choice
+ China_401          0.04237425
+ China_135          0.11236174
+  China_50          0.11268434
+ China_319          0.11300787
+ China_145          0.12677636
+  China_84          0.14404699
+ China_132          0.14487533
+ China_144          0.14487533
+ China_163          0.14487533
+ China_186          0.14487533
+ China_194          0.14487533
+ China_205          0.14487533
+ China_217          0.14487533
+ China_218          0.14487533
+ China_220          0.14487533
+  China_25          0.14487533
+ China_263          0.14487533
+ China_285          0.14487533
+ China_301          0.14487533
+ China_308          0.14487533
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                                                
+modelName              "M1_baseline_MNL"                                                    
+modelDescr             "Baseline pooled MNL for tomato choices (ordinary = reference label)"
+indivID                "respondent_id"                                                      
+nCores                 "1"                                                                  
+outputDirectory        "output/"                                                            
+debug                  "FALSE"                                                              
+workInLogs             "FALSE"                                                              
+seed                   "13"                                                                 
+mixing                 "FALSE"                                                              
+HB                     "FALSE"                                                              
+noValidation           "FALSE"                                                              
+noDiagnostics          "FALSE"                                                              
+calculateLLC           "TRUE"                                                               
+analyticHessian        "FALSE"                                                              
+dropLoopExpansion      "FALSE"                                                              
+dropRedefCheck         "FALSE"                                                              
+memorySaver            "FALSE"                                                              
+panelData              "TRUE"                                                               
+analyticGrad           "TRUE"                                                               
+analyticGrad_manualSet "FALSE"                                                              
+overridePanel          "FALSE"                                                              
+preventOverridePanel   "FALSE"                                                              
+noModification         "FALSE"                                                              
+
+Hessian routines attempted
+--------------------------
+numerical jacobian of LL analytical gradient
+
+
+apollo_probabilities
+----------------------
+function(apollo_beta, apollo_inputs,
+                                    functionality = "estimate") {
+  apollo_attach(apollo_beta, apollo_inputs)
+  on.exit(apollo_detach(apollo_beta, apollo_inputs))
+  V <- list()
+  V[["alt1"]] <- b_price * price_1 + b_organic * organic_1 + b_spec * spec_1
+  V[["alt2"]] <- b_price * price_2 + b_organic * organic_2 + b_spec * spec_2
+  V[["alt3"]] <- asc_nobuy
+  mnl_settings <- list(
+    alternatives = c(alt1 = 1, alt2 = 2, alt3 = 3),
+    avail        = list(alt1 = 1, alt2 = 1, alt3 = 1),
+    choiceVar    = choice,
+    utilities    = V
+  )
+  P <- list()
+  P[["model"]] <- apollo_mnl(mnl_settings, functionality)
+  P <- apollo_panelProd(P, apollo_inputs, functionality)
+  P <- apollo_prepareProb(P, apollo_inputs, functionality)
+  return(P)
+}

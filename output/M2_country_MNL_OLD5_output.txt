@@ -1,0 +1,325 @@
+Model run by admin using Apollo 0.3.7 on R 4.5.0 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : M2_country_MNL
+Model description                           : Country-specific MNL with SEG individual effects on no-buy
+Model run at                                : 2026-06-12 16:27:13.254071
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -12.669168
+     reciprocal of condition number         : 6.04832e-07
+Number of individuals                       : 834
+Number of rows in database                  : 6672
+Number of modelled outcomes                 : 6672
+
+Number of cores used                        :  1 
+Model without mixing
+
+LL(start)                                   : -10291.62
+LL at equal shares, LL(0)                   : -7329.94
+LL at observed shares, LL(C)                : -6342.53
+LL(final)                                   : -5023.04
+Rho-squared vs equal shares                  :  0.3147 
+Adj.Rho-squared vs equal shares              :  0.3131 
+Rho-squared vs observed shares               :  0.208 
+Adj.Rho-squared vs observed shares           :  0.2065 
+AIC                                         :  10070.08 
+BIC                                         :  10151.74 
+
+Estimated parameters                        : 12
+Time taken (hh:mm:ss)                       :  00:00:5 
+     pre-estimation                         :  00:00:1.41 
+     estimation                             :  00:00:0.55 
+     post-estimation                        :  00:00:3.04 
+Iterations                                  :  9  
+
+Unconstrained optimisation.
+
+Estimates:
+                Estimate        s.e.   t.rat.(0)    Rob.s.e. Rob.t.rat.(0)
+b_price_cn      -0.15359    0.006516     -23.572    0.008691      -17.6729
+b_price_jp      -0.02190  7.5419e-04     -29.040  9.9670e-04      -21.9738
+b_organic_cn     1.28134    0.083722      15.305    0.086495       14.8141
+b_organic_jp     0.88016    0.080803      10.893    0.079054       11.1337
+b_spec_cn        0.99989    0.071170      14.049    0.071945       13.8980
+b_spec_jp        0.82442    0.088928       9.271    0.096071        8.5814
+asc_nobuy_cn    -2.37560    0.107112     -22.179    0.155114      -15.3152
+asc_nobuy_jp    -6.69074    0.226236     -29.574    0.348508      -19.1983
+gamma_seg1       0.23376    0.155842       1.500    0.280319        0.8339
+gamma_seg2       0.33884    0.122773       2.760    0.210736        1.6079
+gamma_seg3       0.20594    0.143272       1.437    0.258892        0.7955
+gamma_seg4      -0.47137    0.163440      -2.884    0.282673       -1.6675
+
+
+Overview of choices for MNL model component :
+                                    alt1   alt2    alt3
+Times available                  6672.00 6672.0 6672.00
+Times chosen                     2968.00 3029.0  675.00
+Percentage chosen overall          44.48   45.4   10.12
+Percentage chosen when available   44.48   45.4   10.12
+
+
+
+Classical covariance matrix:
+               b_price_cn   b_price_jp b_organic_cn b_organic_jp    b_spec_cn
+b_price_cn      4.246e-05    1.128e-09  -3.5325e-04   -6.455e-08  -1.0855e-04
+b_price_jp      1.128e-09    5.688e-07   -7.547e-09   -3.345e-05   -5.999e-09
+b_organic_cn  -3.5325e-04   -7.547e-09     0.007009    4.318e-07     0.003775
+b_organic_jp   -6.455e-08   -3.345e-05    4.318e-07     0.006529    3.432e-07
+b_spec_cn     -1.0855e-04   -5.999e-09     0.003775    3.432e-07     0.005065
+b_spec_jp      -4.136e-08    1.168e-06    2.767e-07     0.003778    2.199e-07
+asc_nobuy_cn   3.0334e-04    8.290e-08   3.4851e-04   -4.878e-06     0.002079
+asc_nobuy_jp    4.888e-06   1.3615e-04   -3.262e-05    -0.004705   -2.619e-05
+gamma_seg1     -5.080e-06   -4.041e-07    3.391e-05    2.346e-05    2.719e-05
+gamma_seg2     -7.322e-06   -6.616e-07    4.889e-05    3.788e-05    3.918e-05
+gamma_seg3     -4.950e-06   -2.472e-07    3.305e-05    1.484e-05    2.648e-05
+gamma_seg4      4.125e-06    1.597e-06   -2.769e-05   -9.110e-05   -2.167e-05
+                b_spec_jp asc_nobuy_cn asc_nobuy_jp   gamma_seg1   gamma_seg2
+b_price_cn     -4.136e-08   3.0334e-04    4.888e-06   -5.080e-06   -7.322e-06
+b_price_jp      1.168e-06    8.290e-08   1.3615e-04   -4.041e-07   -6.616e-07
+b_organic_cn    2.767e-07   3.4851e-04   -3.262e-05    3.391e-05    4.889e-05
+b_organic_jp     0.003778   -4.878e-06    -0.004705    2.346e-05    3.788e-05
+b_spec_cn       2.199e-07     0.002079   -2.619e-05    2.719e-05    3.918e-05
+b_spec_jp        0.007908   -2.000e-06     0.004266    1.456e-05    2.229e-05
+asc_nobuy_cn   -2.000e-06     0.011473     0.006463    -0.006593    -0.006780
+asc_nobuy_jp     0.004266     0.006463     0.051183    -0.013754    -0.011195
+gamma_seg1      1.456e-05    -0.006593    -0.013754     0.024287     0.010028
+gamma_seg2      2.229e-05    -0.006780    -0.011195     0.010028     0.015073
+gamma_seg3      7.638e-06    -0.006634    -0.013071     0.011505     0.009733
+gamma_seg4     -6.181e-05    -0.006716    -0.010401     0.009820     0.008707
+               gamma_seg3   gamma_seg4
+b_price_cn     -4.950e-06    4.125e-06
+b_price_jp     -2.472e-07    1.597e-06
+b_organic_cn    3.305e-05   -2.769e-05
+b_organic_jp    1.484e-05   -9.110e-05
+b_spec_cn       2.648e-05   -2.167e-05
+b_spec_jp       7.638e-06   -6.181e-05
+asc_nobuy_cn    -0.006634    -0.006716
+asc_nobuy_jp    -0.013071    -0.010401
+gamma_seg1       0.011505     0.009820
+gamma_seg2       0.009733     0.008707
+gamma_seg3       0.020527     0.009546
+gamma_seg4       0.009546     0.026713
+
+Robust covariance matrix:
+               b_price_cn   b_price_jp b_organic_cn b_organic_jp    b_spec_cn
+b_price_cn      7.553e-05    3.161e-09  -2.6479e-04    3.322e-07   -9.401e-05
+b_price_jp      3.161e-09    9.934e-07   -6.061e-08   -2.759e-05   -9.304e-08
+b_organic_cn  -2.6479e-04   -6.061e-08     0.007481    3.964e-08     0.004172
+b_organic_jp    3.322e-07   -2.759e-05    3.964e-08     0.006250    2.604e-06
+b_spec_cn      -9.401e-05   -9.304e-08     0.004172    2.604e-06     0.005176
+b_spec_jp       6.563e-07   -2.714e-05   -3.091e-06     0.005700   -8.100e-07
+asc_nobuy_cn   5.8165e-04   -4.809e-06  -5.8684e-04   1.8089e-04    3.642e-05
+asc_nobuy_jp    2.299e-05   2.7117e-04  -9.5453e-04    -0.006978  -9.8701e-04
+gamma_seg1     -1.557e-05   -4.750e-06   7.6684e-04   7.4345e-04   9.2351e-04
+gamma_seg2     -3.857e-05    6.027e-06     0.001311  -5.0231e-04     0.001331
+gamma_seg3     -2.273e-05    1.370e-05   9.0815e-04  -7.6805e-04   9.3471e-04
+gamma_seg4     -5.026e-06    1.971e-05   7.1192e-04   -3.872e-05   4.1967e-04
+                b_spec_jp asc_nobuy_cn asc_nobuy_jp   gamma_seg1   gamma_seg2
+b_price_cn      6.563e-07   5.8165e-04    2.299e-05   -1.557e-05   -3.857e-05
+b_price_jp     -2.714e-05   -4.809e-06   2.7117e-04   -4.750e-06    6.027e-06
+b_organic_cn   -3.091e-06  -5.8684e-04  -9.5453e-04   7.6684e-04     0.001311
+b_organic_jp     0.005700   1.8089e-04    -0.006978   7.4345e-04  -5.0231e-04
+b_spec_cn      -8.100e-07    3.642e-05  -9.8701e-04   9.2351e-04     0.001331
+b_spec_jp        0.009230   3.7408e-04    -0.006168  -1.8381e-04  -8.6139e-04
+asc_nobuy_cn   3.7408e-04      0.02406     0.016918     -0.01860    -0.019681
+asc_nobuy_jp    -0.006168      0.01692     0.121458     -0.04483    -0.026976
+gamma_seg1    -1.8381e-04     -0.01860    -0.044831      0.07858     0.026773
+gamma_seg2    -8.6139e-04     -0.01968    -0.026976      0.02677     0.044410
+gamma_seg3      -0.001078     -0.01906    -0.034725      0.03421     0.024412
+gamma_seg4     -2.763e-05     -0.01973    -0.026165      0.02931     0.023183
+               gamma_seg3   gamma_seg4
+b_price_cn     -2.273e-05   -5.026e-06
+b_price_jp      1.370e-05    1.971e-05
+b_organic_cn   9.0815e-04   7.1192e-04
+b_organic_jp  -7.6805e-04   -3.872e-05
+b_spec_cn      9.3471e-04   4.1967e-04
+b_spec_jp       -0.001078   -2.763e-05
+asc_nobuy_cn    -0.019057     -0.01973
+asc_nobuy_jp    -0.034725     -0.02617
+gamma_seg1       0.034214      0.02931
+gamma_seg2       0.024412      0.02318
+gamma_seg3       0.067025      0.02691
+gamma_seg4       0.026908      0.07990
+
+Classical correlation matrix:
+               b_price_cn   b_price_jp b_organic_cn b_organic_jp    b_spec_cn
+b_price_cn       1.000000   2.2959e-04    -0.647532  -1.2260e-04    -0.234079
+b_price_jp     2.2959e-04     1.000000  -1.1953e-04    -0.548952  -1.1177e-04
+b_organic_cn    -0.647532  -1.1953e-04     1.000000    6.383e-05     0.633510
+b_organic_jp  -1.2260e-04    -0.548952    6.383e-05     1.000000    5.968e-05
+b_spec_cn       -0.234079  -1.1177e-04     0.633510    5.968e-05     1.000000
+b_spec_jp      -7.138e-05     0.017414    3.717e-05     0.525748    3.474e-05
+asc_nobuy_cn     0.434612     0.001026     0.038863  -5.6357e-04     0.272747
+asc_nobuy_jp     0.003315     0.797956    -0.001722    -0.257361    -0.001626
+gamma_seg1      -0.005003    -0.003439     0.002599     0.001863     0.002452
+gamma_seg2      -0.009152    -0.007145     0.004756     0.003819     0.004484
+gamma_seg3      -0.005302    -0.002287     0.002755     0.001282     0.002597
+gamma_seg4       0.003873     0.012958    -0.002023    -0.006898    -0.001863
+                b_spec_jp asc_nobuy_cn asc_nobuy_jp   gamma_seg1   gamma_seg2
+b_price_cn     -7.138e-05     0.434612     0.003315    -0.005003    -0.009152
+b_price_jp       0.017414     0.001026     0.797956    -0.003439    -0.007145
+b_organic_cn    3.717e-05     0.038863    -0.001722     0.002599     0.004756
+b_organic_jp     0.525748  -5.6357e-04    -0.257361     0.001863     0.003819
+b_spec_cn       3.474e-05     0.272747    -0.001626     0.002452     0.004484
+b_spec_jp        1.000000  -2.1001e-04     0.212021     0.001050     0.002042
+asc_nobuy_cn  -2.1001e-04     1.000000     0.266701    -0.394953    -0.515575
+asc_nobuy_jp     0.212021     0.266701     1.000000    -0.390105    -0.403052
+gamma_seg1       0.001050    -0.394953    -0.390105     1.000000     0.524106
+gamma_seg2       0.002042    -0.515575    -0.403052     0.524106     1.000000
+gamma_seg3     5.9948e-04    -0.432295    -0.403269     0.515276     0.553348
+gamma_seg4      -0.004253    -0.383632    -0.281280     0.385522     0.433929
+               gamma_seg3   gamma_seg4
+b_price_cn      -0.005302     0.003873
+b_price_jp      -0.002287     0.012958
+b_organic_cn     0.002755    -0.002023
+b_organic_jp     0.001282    -0.006898
+b_spec_cn        0.002597    -0.001863
+b_spec_jp      5.9948e-04    -0.004253
+asc_nobuy_cn    -0.432295    -0.383632
+asc_nobuy_jp    -0.403269    -0.281280
+gamma_seg1       0.515276     0.385522
+gamma_seg2       0.553348     0.433929
+gamma_seg3       1.000000     0.407653
+gamma_seg4       0.407653     1.000000
+
+Robust correlation matrix:
+               b_price_cn   b_price_jp b_organic_cn b_organic_jp    b_spec_cn
+b_price_cn       1.000000   3.6497e-04     -0.35224   4.8356e-04    -0.150349
+b_price_jp     3.6497e-04     1.000000  -7.0307e-04    -0.350162    -0.001298
+b_organic_cn    -0.352242  -7.0307e-04      1.00000    5.798e-06     0.670433
+b_organic_jp   4.8356e-04    -0.350162    5.798e-06     1.000000   4.5792e-04
+b_spec_cn       -0.150349    -0.001298      0.67043   4.5792e-04     1.000000
+b_spec_jp      7.8606e-04    -0.283399  -3.7200e-04     0.750487  -1.1719e-04
+asc_nobuy_cn     0.431458    -0.031108     -0.04374     0.014752     0.003263
+asc_nobuy_jp     0.007589     0.780649     -0.03167    -0.253289    -0.039365
+gamma_seg1      -0.006390    -0.017000      0.03163     0.033549     0.045792
+gamma_seg2      -0.021059     0.028695      0.07192    -0.030151     0.087798
+gamma_seg3      -0.010104     0.053108      0.04056    -0.037527     0.050183
+gamma_seg4      -0.002046     0.069954      0.02912    -0.001733     0.020636
+                b_spec_jp asc_nobuy_cn asc_nobuy_jp   gamma_seg1   gamma_seg2
+b_price_cn     7.8606e-04     0.431458     0.007589    -0.006390     -0.02106
+b_price_jp      -0.283399    -0.031108     0.780649    -0.017000      0.02870
+b_organic_cn  -3.7200e-04    -0.043740    -0.031666     0.031627      0.07192
+b_organic_jp     0.750487     0.014752    -0.253289     0.033549     -0.03015
+b_spec_cn     -1.1719e-04     0.003263    -0.039365     0.045792      0.08780
+b_spec_jp        1.000000     0.025103    -0.184215    -0.006825     -0.04255
+asc_nobuy_cn     0.025103     1.000000     0.312956    -0.427721     -0.60209
+asc_nobuy_jp    -0.184215     0.312956     1.000000    -0.458899     -0.36730
+gamma_seg1      -0.006825    -0.427721    -0.458899     1.000000      0.45321
+gamma_seg2      -0.042547    -0.602086    -0.367304     0.453213      1.00000
+gamma_seg3      -0.043355    -0.474557    -0.384863     0.471454      0.44745
+gamma_seg4      -0.001017    -0.449874    -0.265598     0.369902      0.38917
+               gamma_seg3   gamma_seg4
+b_price_cn       -0.01010    -0.002046
+b_price_jp        0.05311     0.069954
+b_organic_cn      0.04056     0.029118
+b_organic_jp     -0.03753    -0.001733
+b_spec_cn         0.05018     0.020636
+b_spec_jp        -0.04335    -0.001017
+asc_nobuy_cn     -0.47456    -0.449874
+asc_nobuy_jp     -0.38486    -0.265598
+gamma_seg1        0.47145     0.369902
+gamma_seg2        0.44745     0.389172
+gamma_seg3        1.00000     0.367683
+gamma_seg4        0.36768     1.000000
+
+ 20 most extreme outliers in terms of lowest average per choice prediction:
+        ID Avg prob per choice
+ Japan_369          0.06395775
+ Japan_202          0.06445589
+ China_401          0.08136565
+ Japan_201          0.08890193
+ Japan_338          0.09919035
+ Japan_310          0.10986285
+ Japan_321          0.10986285
+  Japan_48          0.11007356
+  Japan_91          0.11997726
+ Japan_254          0.12338622
+ Japan_260          0.13765680
+  Japan_46          0.13792083
+ Japan_144          0.14584653
+  Japan_49          0.14775520
+  Japan_16          0.15743168
+ China_319          0.16583566
+ Japan_261          0.16916397
+  Japan_13          0.18173313
+  Japan_23          0.18173313
+ Japan_396          0.18264380
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                                       
+modelName              "M2_country_MNL"                                            
+modelDescr             "Country-specific MNL with SEG individual effects on no-buy"
+indivID                "respondent_id"                                             
+nCores                 "1"                                                         
+outputDirectory        "output/"                                                   
+debug                  "FALSE"                                                     
+workInLogs             "FALSE"                                                     
+seed                   "13"                                                        
+mixing                 "FALSE"                                                     
+HB                     "FALSE"                                                     
+noValidation           "FALSE"                                                     
+noDiagnostics          "FALSE"                                                     
+calculateLLC           "TRUE"                                                      
+analyticHessian        "FALSE"                                                     
+dropLoopExpansion      "FALSE"                                                     
+dropRedefCheck         "FALSE"                                                     
+memorySaver            "FALSE"                                                     
+panelData              "TRUE"                                                      
+analyticGrad           "TRUE"                                                      
+analyticGrad_manualSet "FALSE"                                                     
+overridePanel          "FALSE"                                                     
+preventOverridePanel   "FALSE"                                                     
+noModification         "FALSE"                                                     
+
+Hessian routines attempted
+--------------------------
+numerical jacobian of LL analytical gradient
+
+
+apollo_probabilities
+----------------------
+function(apollo_beta, apollo_inputs,
+                                    functionality = "estimate") {
+  apollo_attach(apollo_beta, apollo_inputs)
+  on.exit(apollo_detach(apollo_beta, apollo_inputs))
+  
+  # Individual-specific segment effect on utility of no-buy
+  seg_effect <- gamma_seg1 * seg1 + gamma_seg2 * seg2 +
+    gamma_seg3 * seg3 + gamma_seg4 * seg4
+  
+  V <- list()
+  V[["alt1"]] <-
+    b_price_cn * price_cn_1 + b_price_jp * price_jp_1 +
+    (b_organic_cn * china + b_organic_jp * japan) * organic_1 +
+    (b_spec_cn    * china + b_spec_jp    * japan) * spec_1
+  
+  V[["alt2"]] <-
+    b_price_cn * price_cn_2 + b_price_jp * price_jp_2 +
+    (b_organic_cn * china + b_organic_jp * japan) * organic_2 +
+    (b_spec_cn    * china + b_spec_jp    * japan) * spec_2
+  
+  # No-buy ASC: country-specific baseline + individual segment shift
+  V[["alt3"]] <- asc_nobuy_cn * china + asc_nobuy_jp * japan + seg_effect
+  
+  mnl_settings <- list(
+    alternatives = c(alt1 = 1, alt2 = 2, alt3 = 3),
+    avail        = list(alt1 = 1, alt2 = 1, alt3 = 1),
+    choiceVar    = choice,
+    utilities    = V
+  )
+  
+  P <- list()
+  P[["model"]] <- apollo_mnl(mnl_settings, functionality)
+  P <- apollo_panelProd(P, apollo_inputs, functionality)
+  P <- apollo_prepareProb(P, apollo_inputs, functionality)
+  return(P)
+}
